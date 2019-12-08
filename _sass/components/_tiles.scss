@@ -1,0 +1,128 @@
+///
+/// Forty by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+.tiles {
+	display: flex;
+	flex-flow: wrap;
+	border-top: none !important;
+
+	& + * {
+		border-top: none !important;
+	}
+	
+	.tile:nth-child(4n - 1),
+	.tile:nth-child(4n - 2) {
+		flex: 1 auto;
+	}
+
+	@include breakpoint(medium) {
+	  .tile {
+			width: 50% !important;
+	  }
+	}
+
+	@include breakpoint(xsmall) {
+		display: block;
+
+		.tile {
+			width: 100% !important;
+		}
+	}
+}
+
+.tile {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+	transition:
+		transform 0.25s ease,
+		opacity 0.25s ease,
+		filter 1s ease;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 40vh;
+	max-height: 40em;
+	min-height: 23em;
+	overflow: hidden;
+	padding: 4em;
+	position: relative;
+	width: 40%;
+	
+	@include breakpoint(large) {
+	  padding: 4em 3em;
+	}
+
+	@include breakpoint(small) {
+	  padding: 3em 1.5em;
+		height: auto;
+		max-height: none;
+		min-height: 0;
+
+		.tile__title {
+			font-size: 1.5em;
+		}
+	}
+
+	&__title {
+		font-size: 1.75em;
+		margin-bottom: 0;
+	}
+	
+	> * {
+	  position: relative;
+		z-index: 3;
+	}
+	
+	> :last-child {
+	  margin-bottom: 0;
+	}
+
+	&::before {
+		bottom: 0;
+		content: '';
+		height: 100%;
+		left: 0;
+		opacity: 0.85;
+		position: absolute;
+		transition: opacity 0.5s ease;
+		width: 100%;
+		z-index: 2;
+	}
+
+	&::after {
+		background-color: transparentize(_palette(bg), 0.75);
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+
+	&.is-transitioning {
+		transform: scale(0.95);
+		filter: blur(0.5em);
+		opacity: 0;
+	}
+	
+	&.style1::before { background-color: _palette(accent1); }
+	&.style2::before { background-color: _palette(accent2); }
+	&.style3::before { background-color: _palette(accent3); }
+	&.style4::before { background-color: _palette(accent4); }
+	&.style5::before { background-color: _palette(accent5); }
+	&.style6::before { background-color: _palette(accent6); }
+}
+
+  a.tile {
+    border: none !important;
+    color: inherit !important;
+    
+		&:hover::before {
+			opacity: 0;
+		}
+	}

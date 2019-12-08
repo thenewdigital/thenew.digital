@@ -1,0 +1,86 @@
+---
+---
+
+*, *::before, *::after {
+  background: none !important;
+  box-shadow: none !important;
+  color: #000 !important;
+  animation: none !important;
+  transition: none !important;
+}
+
+@page {
+  margin: 0.5in 0.65in;
+}
+
+:root {
+  font-size: 12pt;
+}
+
+[role="main"] > * {
+  border: none !important;
+}
+
+h1 {
+  font-size: 2em !important;
+}
+
+h2 {
+  font-size: 1.5em !important;
+}
+
+h3 {
+  font-size: 1.2em !important;
+}
+
+h4 {
+  font-size: 1em !important;
+}
+
+.logo {
+  line-height: 1 !important;
+  padding: 0 !important;
+}
+
+.inner {
+  margin: 0 0 3em !important;
+  padding: 0 !important;
+  width: auto !important;
+}
+
+.site-header nav, #contact, .no-print {
+  display: none !important;
+}
+
+.site-header {
+  height: auto !important;
+  position: static !important;
+  margin-bottom: 0.5in !important;
+}
+
+  body {
+    padding: 0 !important;
+  }
+
+.banner {
+  height: auto !important;
+  min-height: 0 !important;
+  margin: 0 0 3em !important;
+  padding: 0 !important;
+  position: static !important;
+  
+  .inner {
+    margin: 0 !important;
+  }
+}
+
+.major {
+  width: -moz-max-content !important;
+	width: -webkit-max-content !important;
+	width: -ms-max-content !important;
+	width: max-content !important;
+}
+
+.print-only {
+  display: block !important;
+}

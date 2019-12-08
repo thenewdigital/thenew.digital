@@ -1,0 +1,12 @@
+<head>
+	<title>
+	  {% if page.title and page.path != 'index.html' %}
+	  {{ page.title }} |
+	  {% endif %}
+    {{ site.titleLeft }} {{ site.titleRight }}
+	</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
+	<link rel="stylesheet" media="print" href="{{ "assets/css/print.css" | relative_url }}" />
+</head>

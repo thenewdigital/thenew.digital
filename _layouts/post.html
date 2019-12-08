@@ -1,0 +1,39 @@
+---
+layout: default
+---
+  
+{% if page.description %}
+<header id="banner"
+  class="banner {{page.theme}}"
+  {% if page.image %}
+  style="background-image: url({{site.baseurl}}{{page.image}});"
+  {% endif %}
+>
+  <div class="inner">
+    <h1 class="major fit">{{ page.title }}</h1>
+    {{ page.description }}
+  </div>
+</header>
+{% endif %}
+  
+    
+<main role="main" id="main">
+
+  <div class="inner">
+    {% unless page.description %}
+    <h1 class="major">{{page.title}}</h1>
+    {% endunless %}
+    {% if page.print-only == false %}
+    {{content}}
+    {% else %}
+    <div class="box no-print">
+      <p>To not contribute to the growing screen addiction crisis, this article is available for print or in audio format on The New Digital Podcast.</p>
+      <button onclick="print()" class="button big fit special icon fa-print">Print article</button>
+    </div>
+    <div class="print-only">
+	  {{ content }}
+	  </div>
+	  {% endif %}
+	</div>
+
+</main>

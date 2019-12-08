@@ -1,0 +1,16 @@
+titleLeft: The New
+titleRight: Digital
+email: hey@thenew.digital
+description:
+author: Maxwell Barvian
+phone: (331) 215-7965
+
+# social settings
+petition_url: https://www.change.org/p/19355783/
+formspree_id: xaynjygq
+
+# build settings
+markdown: kramdown
+permalink: pretty
+sass:
+  style: compressed

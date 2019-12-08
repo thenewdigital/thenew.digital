@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<main role="main" id="main" class="alt">
+  
+  <section>
+  	<div class="inner">
+  		<h1 class="major">About The New Digital</h1>
+  		<div class="row">
+        <div class="8u 12u$(medium)">
+          {{content}}
+        </div>
+        <div class="4u 12u$(medium)">
+          <img src="{{site.baseurl}}{{page.headshot}}" alt="{{page.headshot_alt}}" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="mission" class="banner style6">
+    <div class="inner">
+      <h2 class="major">Mission</h2>
+      <div class="content">
+        {{page.mission}}
+      </div>
+    </div>
+  </section>
+  <section id="consultants">
+    <div class="inner">
+      <h2 class="major">Research Consultants</h2>
+      <div class="row">
+        {% for consultant in site.data.consultants %}
+          <div class="3u 6u$(medium)">
+            <div class="image fit">
+              <img src="{{consultant.headshot}}" alt="{{consultant.name}}" />
+            </div>
+            <h3>{{consultant.name}}</h3>
+            <p>{{consultant.title}}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  
+</main>
