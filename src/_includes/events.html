@@ -1,0 +1,8 @@
+{% assign events = include.events %}
+{% if events.size > 0 %}
+<ul class="alt">
+  {% for event in upcoming %}
+    <li>{{event.location}}</li>
+  {% endfor %}
+</ul>
+{% endif %}

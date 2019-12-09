@@ -6,6 +6,10 @@ layout: default
 
   <div class="inner">
     {{ content }}
+    
+    <h2 class="major">Upcoming Events</h2>
+    {% assign upcoming = site.data.events | where_exp: "event", "event.date >= site.time" %}
+    {% include events.html events=upcoming %}
   </div>
 
 </main>
