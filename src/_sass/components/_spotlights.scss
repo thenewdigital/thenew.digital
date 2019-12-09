@@ -52,10 +52,15 @@
 		  flex-direction: column;
 		  justify-content: center;
 		  align-items: flex-start;
-		  padding: 2em 3em;
+		  padding: 4em 3em;
 			width: 70%;
+			
+			:last-child {
+			  margin-bottom: 0;
+			}
 
 			> .inner {
+			  padding: 0 !important;
 				margin: 0 auto;
 				max-width: 100%;
 				width: _size(inner);
@@ -105,7 +110,6 @@
 			}
 
 			> .content {
-				@include padding(4em, 3em);
 				width: 100%;
 			}
 		}
@@ -114,7 +118,7 @@
 	@include breakpoint(small) {
 		> * {
 			> .content {
-				@include padding(3em, 1.5em);
+				padding: 3em 1.5em;
 			}
 		}
 	}

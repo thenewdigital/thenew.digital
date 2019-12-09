@@ -41,6 +41,9 @@ layout: default
       		    {% endif %}
       				<h3>{{product.name}}</h3>
       				{{product.description | markdownify }}
+      				{% if product.image_credit %}
+      				<p class="caption">Image credit: {{product.image_credit}}</p>
+      				{% endif %}
       			</div>
       		</div>
       	</article>
