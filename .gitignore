@@ -1,5 +1,13 @@
-_site/
+build/
 .sass-cache/
+.jekyll-cache/
 .jekyll-metadata
 Gemfile.lock
 *.gem
+node_modules/
+.env
+
+# These get pulled in from Dropbox
+src/pages
+src/assets/images
+src/_posts

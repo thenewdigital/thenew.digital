@@ -1,0 +1,9 @@
+{% assign page = site.pages | where:"path",include.page |first %}
+<a class="tile {{ page.theme }}" href="{{ page.url | relative_url  }}"
+  {% if page.image %}
+  style="background-image: url({{site.baseurl}}/{{page.image}});"
+  {% endif %}
+>
+  <h3 class="tile__title major">{{page.tile_title|default: page.title}}</h3>
+  <p>{{ page.description }}</p>
+</a>

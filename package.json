@@ -1,0 +1,28 @@
+{
+  "name": "thenewdigital",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "get-content": "node ./scripts/get-content-from-dropbox.js",
+    "start": "npm run get-content && bundle exec jekyll serve",
+    "build": "npm run get-content && bundle exec jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thenewdigital/thenew.digital.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thenewdigital/thenew.digital/issues"
+  },
+  "homepage": "http://thenew.digital",
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "dropbox": "^4.0.5",
+    "extract-zip": "^1.6.7",
+    "fs-extra": "^8.1.0",
+    "isomorphic-fetch": "^2.2.1"
+  }
+}

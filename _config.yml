@@ -10,7 +10,8 @@ petition_url: https://www.change.org/p/19355783/
 formspree_id: xaynjygq
 
 # build settings
+source: ./src
+destination: ./build
 markdown: kramdown
-permalink: pretty
 sass:
   style: compressed

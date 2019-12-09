@@ -1,0 +1,22 @@
+<!-- Header -->
+<header class="site-header{% if page.header_alt %} alt {{page.theme}}{% endif %}">
+	<a href="{{ "" | absolute_url }}/" class="logo"><span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong></a>
+	<nav>
+		<a href="#menu">Menu</a>
+	</nav>
+</header>
+
+<!-- Menu -->
+<nav class="site-menu">
+  <div class="site-menu__wrap">
+  	<ul class="links">
+  	  {% for path in site.data.menu %}
+    	  {% assign page = site.pages | where:"path",path | first %}
+    	  <li><a href="{{page.url}}">{{page.title}}</a></li>
+  	  {% endfor %}
+  	</ul>
+  	<ul class="actions vertical">
+  		<li><a href="{{site.petition_url}}" class="button special fit">Petition for Change</a></li>
+  	</ul>
+	</div>
+</nav>
