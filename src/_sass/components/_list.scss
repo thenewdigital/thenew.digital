@@ -6,6 +6,10 @@
 
 /* List */
 
+  li > p {
+    margin-bottom: 0;
+  }
+
 	ol {
 		list-style: decimal;
 		margin: 0 0 _size(element-margin) 0;
@@ -13,6 +17,8 @@
 
 		li {
 			padding-left: 0.25em;
+			
+			+ li { margin-top: 1em; }
 		}
 	}
 
@@ -23,6 +29,8 @@
 
 		li {
 			padding-left: 0.5em;
+			
+			+ li { margin-top: 1em; }
 		}
 
 		&.alt {
@@ -65,23 +73,13 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			margin-top: _size(element-margin) * -0.5;
 
 			li {
 				display: inline-block;
-				padding: 0 (_size(element-margin) * 0.5) 0 0;
+				margin: (_size(element-margin) * 0.5) (_size(element-margin) * 0.5) 0 0;
+				padding: 0;
 				vertical-align: middle;
-
-				&:last-child {
-					padding-right: 0;
-				}
-				
-				@include breakpoint(small) {
-				  padding: 0 0 (_size(element-margin) * 0.5);
-				  
-				  &:last-child {
-				    padding-bottom: 0;
-				  }
-				}
 			}
 
 			&.small {

@@ -12,6 +12,10 @@
 	letter-spacing: _font(letter-spacing);
 	line-height: 1.65;
 	
+	counter-reset: h2;
+	counter-reset: h3;
+	counter-reset: h4;
+
 	@include breakpoint(xxsmall) {
 		font-size: 14px;
 	}
@@ -71,14 +75,41 @@ h1 {
 
 h2 {
 	font-size: 1.75em;
+	
+	&.numbered {
+	  counter-increment: h2;
+	  counter-reset: h4;
+	  counter-reset: h3;
+	  
+    &::before {
+  	  content: counter(h2)'. ';
+    }
+	}
 }
 
 h3 {
 	font-size: 1.35em;
+	
+	&.numbered {
+	  counter-increment: h3;
+	  counter-reset: h4;
+	  
+	  &::before {
+  	  content: counter(h2)'.'counter(h3)' ';
+	  }
+	}
 }
 
 h4 {
 	font-size: 1.1em;
+	
+	&.numbered {
+	  counter-increment: h4;
+	  
+	  &::before {
+  	  content: counter(h2)'.'counter(h3)'.'counter(h4)' ';
+	  }
+	}
 }
 
 h5 {

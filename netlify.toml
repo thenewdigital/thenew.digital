@@ -2,3 +2,7 @@
   publish = "./build"
   command = "npm run build"
   functions = "./functions"
+  
+[[redirects]]
+  from = "/petition"
+  to = "https://www.change.org/p/19355783/"
