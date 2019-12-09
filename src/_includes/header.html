@@ -1,6 +1,6 @@
 <!-- Header -->
-<header class="site-header{% if page.header_alt %} alt {{page.theme}}{% endif %}">
-	<a href="{{ "" | absolute_url }}/" class="logo"><span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong></a>
+<header class="site-header{% if page.banner %} alt {{page.theme}}{% endif %}">
+	<a href="{% link index.html %}" class="logo"><span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong></a>
 	<nav>
 		<a href="#menu">Menu</a>
 	</nav>

@@ -2,17 +2,7 @@
 layout: default
 ---
 
-<header id="banner"
-  class="banner {{page.theme}}"
-  {% if page.image %}
-  style="background-image: url({{site.baseurl}}{{page.image}});"
-  {% endif %}
->
-  <div class="inner">
-    <h1 class="major fit">{{ page.title }}</h1>
-    {{ page.description | markdownify }}
-  </div>
-</header>
+{% include banner.html %}
 
 <main role="main" id="main">
 
