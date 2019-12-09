@@ -1,5 +1,5 @@
 <!-- Header -->
-<header class="site-header{% if page.banner %} alt {{page.theme}}{% endif %}">
+<header class="site-header{% if page.banner or page.header_alt %} alt {{page.theme}}{% endif %}">
 	<a href="{% link index.html %}" class="logo"><span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong></a>
 	<nav>
 		<a href="#menu">Menu</a>
@@ -11,8 +11,8 @@
   <div class="site-menu__wrap">
   	<ul class="links">
   	  {% for path in site.data.menu %}
-    	  {% assign page = site.pages | where:"path",path | first %}
-    	  <li><a href="{{page.url}}">{{page.title}}</a></li>
+    	  {% assign p = site.pages | where:"path",path | first %}
+    	  <li><a href="{{p.url}}">{{p.title}}</a></li>
   	  {% endfor %}
   	</ul>
   	<ul class="actions vertical">

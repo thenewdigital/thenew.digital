@@ -2,8 +2,6 @@
 layout: default
 ---
 
-{% include banner.html %}
-
 <main role="main" id="main">
 
   <div class="inner">
@@ -14,8 +12,17 @@ layout: default
     {{content}}
     {% else %}
     <div class="box no-print">
-      <p>To not contribute to the growing screen addiction crisis, this article is available for print or in audio format on The New Digital Podcast.</p>
-      <button onclick="print()" class="button big fit special icon fa-print">Print article</button>
+      <p>The Internet is great; screens we view it on aren't. To not contribute to the growing screen addiction crisis, this article is available for print or in audio format on The New Digital Podcast.</p>
+      
+      {% assign words = content | number_of_words %}
+      <button onclick="print()" class="button big fit special icon fa-print">
+        <div>
+          Print article<br/>
+          <span class="label">
+            ({% if words < 360 %}<1{% else %}{{ words | divided_by:180 }}{% endif %} min read)
+          </span>
+        </div>
+      </button>
     </div>
     <div class="print-only">
 	  {{ content }}

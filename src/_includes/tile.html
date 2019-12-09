@@ -1,9 +1,9 @@
-{% assign page = site.pages | where:"path",include.page |first %}
-<a class="tile {{ page.theme }}" href="{{ page.url | relative_url  }}"
-  {% if page.image %}
-  style="background-image: url({{site.baseurl}}/{{page.image}});"
+{% assign p = site.pages | where:"path",include.page |first %}
+<a class="tile {{ p.theme }}" href="{{ p.url | relative_url  }}"
+  {% if p.image %}
+  style="background-image: url({{p.image | relative_url}});"
   {% endif %}
 >
-  <h3 class="tile__title major">{{page.tile_title|default: page.title}}</h3>
-  <p>{{ page.description }}</p>
+  <h3 class="tile__title major">{{p.tile_title | default: p.title}}</h3>
+  <p>{{ p.description }}</p>
 </a>
