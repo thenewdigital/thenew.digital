@@ -5,6 +5,7 @@ build/
 Gemfile.lock
 *.gem
 node_modules/
+*.log
 .env
 
 # These get pulled in from Dropbox

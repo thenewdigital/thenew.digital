@@ -3,6 +3,9 @@
   command = "npm run build"
   functions = "./functions"
   
+[context.production]
+  ENVIRONMENT = { JEKYLL_ENV = "production" }
+  
 [[redirects]]
   from = "/petition"
   to = "https://www.change.org/p/19355783/"

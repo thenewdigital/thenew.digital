@@ -12,5 +12,14 @@ formspree_id: xaynjygq
 source: ./src
 destination: ./build
 markdown: kramdown
-sass:
-  style: compressed
+
+uncss:
+  stylesheets:
+    - assets/css/main.css
+  ignore:
+    - ".is-loading"
+    - "#titleBar"
+  # media:
+  #   - print
+  timeout: 30
+  

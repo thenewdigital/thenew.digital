@@ -23,6 +23,10 @@
     "dropbox": "^4.0.5",
     "extract-zip": "^1.6.7",
     "fs-extra": "^8.1.0",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "uncss": "^0.17.2"
+  },
+  "dependencies": {
+    "skel-framework": "https://github.com/ajlkn/skel.git#v3.0.1"
   }
 }
