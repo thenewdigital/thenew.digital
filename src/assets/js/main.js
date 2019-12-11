@@ -14,13 +14,10 @@
 {% include_relative components/tile.js %}
 
 function setup() {
-  // Disable animations/transitions until the page has loaded.
-	document.body.classList.add('is-loading')
-	
 	window.addEventListener('load', function() {
 	  setTimeout(function() {
-	    document.body.classList.remove('is-loading')
-	  }, 100)
+	    document.documentElement.classList.remove('is-loading')
+	  }, 1)
 	})
 	window.addEventListener('unload', function() {
 	  setTimeout(function() {

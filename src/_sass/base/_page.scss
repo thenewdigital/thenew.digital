@@ -13,14 +13,14 @@ body {
   &.is-transitioning {
 		opacity: 0;
 	}
+}
 
-	// Prevents animation/transition "flicker" on page load.
-	// Automatically added/removed by js/main.js.
-	&.is-loading {
-		&, *, *::before, *::after {
-		  animation: none !important;
-		  transition: none !important;
-		}
+// Prevents animation/transition "flicker" on page load.
+// Automatically added/removed by js/main.js.
+:root.is-loading {
+	&, *, *::before, *::after {
+	  animation: none !important;
+	  transition: none !important;
 	}
 }
 

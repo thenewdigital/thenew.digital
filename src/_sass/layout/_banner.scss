@@ -93,7 +93,7 @@
 	&.style5::after { background-color: _palette(accent5); }
 	&.style6::after { background-color: _palette(accent6); }
 
-	body.is-loading & {
+	:root.is-loading & {
 		&::after {
 			opacity: 1.0;
 		}
