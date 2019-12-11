@@ -1,0 +1,4 @@
+<span class="icon{% if include.alt %} alt{% endif %}">
+  {% capture path %}icons/{{include.icon}}.svg{% endcapture %}
+  {% include {{path}} %}
+</span>

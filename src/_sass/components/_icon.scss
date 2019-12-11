@@ -6,45 +6,39 @@
 
 /* Icon */
 
-	.icon {
-		@include icon;
-		border-bottom: none;
-		position: relative;
+.icon {
+	@include icon;
+	border-bottom: none;
+	display: inline-block;
+	position: relative;
 
-		> .label {
-			display: none;
-		}
-
-		&.alt {
-			&:before {
-				background-color: _palette(fg-bold);
-				border-radius: 100%;
-				color: _palette(bg);
-				display: inline-block;
-				height: 2em;
-				line-height: 2em;
-				text-align: center;
-				width: 2em;
-			}
-		}
+	svg {
+	  fill: currentColor;
+	  display: inline-block;
+	  vertical-align: middle;
+	  width: 1em;
 	}
 
-	a.icon {
-		&.alt {
-			&:before {
-				@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
-			}
-
-			&:hover {
-				&:before {
-					background-color: _palette(accent1);
-				}
-			}
-
-			&:active {
-				&:before {
-					background-color: desaturate(darken(_palette(accent1), 15), 5);
-				}
-			}
-		}
+	&.alt {
+	  align-items: center;
+		background-color: _palette(fg-bold);
+		border-radius: 100%;
+		color: _palette(bg);
+		display: inline-flex;
+		height: 2em;
+		justify-content: center;
+		width: 2em;
 	}
+}
+
+a .icon.alt {
+	transition: background-color #{_duration(transition)} ease-in-out;
+}
+
+a:hover .icon.alt {
+	background-color: _palette(accent1);
+}
+
+a:active .icon.alt {
+	background-color: desaturate(darken(_palette(accent1), 15), 5);
+}

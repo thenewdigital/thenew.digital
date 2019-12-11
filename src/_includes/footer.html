@@ -25,14 +25,14 @@
 		<section class="split">
 			<section>
 				<div class="contact-method">
-					<span class="icon alt fa-envelope"></span>
+					{% include icon.html icon="envelope" alt=true %}
 					<h3>Email</h3>
 					<a href="mailto:{{site.email}}">{{ site.email }}</a>
 				</div>
 			</section>
 			<section>
 				<div class="contact-method">
-					<span class="icon alt fa-phone"></span>
+					{% include icon.html icon="phone" alt=true %}
 					<h3>Call/Text</h3>
 					<a href="tel:{{site.phone}}">{{ site.phone }}</a>
 				</div>
