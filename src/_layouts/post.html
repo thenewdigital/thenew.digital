@@ -20,7 +20,7 @@ layout: default
         <div>
           Print article<br/>
           <span class="label">
-            ({% if words < 360 %}<1{% else %}{{ words | divided_by:180 }}{% endif %} min read)
+            {% if words < 360 %}<1{% else %}{{ words | divided_by:180 }}{% endif %} min read
           </span>
         </div>
       </button>

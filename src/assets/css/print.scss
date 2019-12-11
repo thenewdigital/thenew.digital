@@ -17,8 +17,26 @@
   font-size: 12pt;
 }
 
-[role="main"] > * {
-  border: none !important;
+[role="main"] {
+  > * {
+    border: none !important;
+  }
+  
+  a {
+    border-bottom: none !important;
+    border-style: solid;
+    text-decoration: underline;
+  }
+  
+  a[href]::after {
+    text-decoration: none;
+    content: ' ('attr(href)')';
+    word-break: break-word;
+  }
+  
+  a[href^="/"]::after {
+    content: ' ({{site.url}}'attr(href)')';
+  }
 }
 
 h1 {
@@ -63,10 +81,11 @@ h4 {
   }
 
 .banner {
+  border-bottom: 1px dotted gray !important;
   height: auto !important;
   min-height: 0 !important;
-  margin: 0 0 3em !important;
-  padding: 0 !important;
+  margin: 0 0 1.5em !important;
+  padding: 0 0 1.5em !important;
   position: static !important;
   
   .inner {
