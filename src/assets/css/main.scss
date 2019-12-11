@@ -22,7 +22,7 @@
 ));
 
 @include skel-layout((
-	reset: 'normalize',
+	reset: 'full',
 	boxModel: 'border',
 	grid: ( gutters: 2em ),
 	breakpoints: (

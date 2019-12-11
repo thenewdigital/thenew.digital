@@ -16,10 +16,14 @@ markdown: kramdown
 uncss:
   stylesheets:
     - assets/css/main.css
+  files:
+    - "*.html"
+    - "!(study)/**/*.html"
+    - "study/!(questionnaire).html"
   ignore:
-    - ".is-loading"
-    - "#titleBar"
-  # media:
-  #   - print
+    - "/\\.reveal/"
+    - "/\\.is-loading/"
+    - "/\\.is-menu-visible/"
+    - "/\\.is-transitioning/"
   timeout: 30
   

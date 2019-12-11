@@ -21,6 +21,10 @@
 	}
 }
 
+body {
+  line-height: inherit;
+}
+
 input, select, textarea {
 	font: inherit;
 }
