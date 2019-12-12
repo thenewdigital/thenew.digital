@@ -24,6 +24,7 @@ uncss:
   ignore:
     - "/\\.reveal/"
     - "/\\.is-loading/"
+    - "/\\.fonts-active/"
     - "/\\.is-menu-visible/"
     - "/\\.is-transitioning/"
   timeout: 30
