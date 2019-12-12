@@ -20,6 +20,10 @@
       classes: false,
       active: function() {
         document.documentElement.classList.remove('is-loading')
+        document.documentElement.classList.add('fonts-active')
+      },
+      inactive: function() {
+        document.documentElement.classList.remove('is-loading')
       }
     }
     

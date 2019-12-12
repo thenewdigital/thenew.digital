@@ -27,12 +27,14 @@
 	z-index: _misc(z-index-base);
 	
 	.logo, nav span {
-	  transition: opacity _duration(banner) ease;
-	  transition-delay: 0.75s;
-	  
 	  :root.is-loading & {
   		opacity: 0;
   	}
+  	
+	  :root.fonts-active & {
+	    transition: opacity _duration(banner) ease;
+  	  transition-delay: 0.75s;
+	  }
 	}
 
 	.logo {

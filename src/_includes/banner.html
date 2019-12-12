@@ -6,9 +6,14 @@
   {% endif %}
 >
   <div class="inner">
+    {% if page.cta %}<div class="content">{% endif %}
     <h1{% if page.description %} class="major fit"{% endif %}>
       {{ page.title }}
     </h1>
+    {% if page.cta %}
+    <a href="{{page.cta.link}}" class="cta button special">{{page.cta.text}}</a>
+    {% endif %}
+    {% if page.cta %}</div>{% endif %}
     {% if page.description %}
     {{ page.description | markdownify }}
     {% endif %}

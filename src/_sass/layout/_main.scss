@@ -9,10 +9,13 @@
 
 	> * {
 		border-top: solid 1px _palette(border);
-		transition: opacity 0.75s ease;
 	  
 	  :root.is-loading & {
   		opacity: 0;
+  	}
+  	
+  	:root.fonts-active & {
+  	  transition: opacity 0.35s ease;
   	}
 
 		&:first-child {
@@ -21,14 +24,14 @@
 		
 		// Loaded animations
 		@for $nth from 2 through 10 {
-		  &:nth-child(#{$nth}) { transition-delay: 0.25s * $nth; }
+		  &:nth-child(#{$nth}) { transition-delay: 0.35s * $nth !important; }
 		}
 	}
 	
   // Delay after banner if there is one
 	.banner + & > * {
 		@for $nth from 1 through 10 {
-		  &:nth-child(#{$nth}) { transition-delay: 0.25s * $nth; }
+		  &:nth-child(#{$nth}) { transition-delay: 0.35s * $nth !important; }
 		}
 	}
 

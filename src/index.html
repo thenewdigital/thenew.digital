@@ -11,9 +11,7 @@ header_alt: true
     <h1 class="major fit">{{problem.tile_title | default: problem.title}}</h1>
     <div class="content">
       {{problem.description|markdownify}}
-      <ul class="actions">
-        <li><a href="{{ problem.url }}" class="button next">{{problem.title}}</a></li>
-      </ul>
+      <a href="{{ problem.url }}" class="cta button next">{{problem.title}}</a>
     </div>
   </div>
 </header>
