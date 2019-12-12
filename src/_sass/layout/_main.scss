@@ -9,9 +9,26 @@
 
 	> * {
 		border-top: solid 1px _palette(border);
+		transition: opacity 0.75s ease;
+	  
+	  :root.is-loading & {
+  		opacity: 0;
+  	}
 
 		&:first-child {
 			border-top: 0;
+		}
+		
+		// Loaded animations
+		@for $nth from 2 through 10 {
+		  &:nth-child(#{$nth}) { transition-delay: 0.25s * $nth; }
+		}
+	}
+	
+  // Delay after banner if there is one
+	.banner + & > * {
+		@for $nth from 1 through 10 {
+		  &:nth-child(#{$nth}) { transition-delay: 0.25s * $nth; }
 		}
 	}
 

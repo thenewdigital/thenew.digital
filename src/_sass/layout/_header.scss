@@ -26,7 +26,7 @@
 	width: 100%;
 	z-index: _misc(z-index-base);
 	
-	.logo, nav {
+	.logo, nav span {
 	  transition: opacity _duration(banner) ease;
 	  transition-delay: 0.75s;
 	  

@@ -2,12 +2,12 @@
 <header class="site-header{% if page.banner or page.header_alt %} alt {{page.theme}}{% endif %}">
 	<a href="{% link index.html %}" class="logo"><span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong></a>
 	<nav>
-		<a href="#menu">Menu</a>
+		<a href="#menu"><span>Menu</span></a>
 	</nav>
 </header>
 
 <!-- Menu -->
-<nav class="site-menu">
+<nav class="site-menu" id="menu">
   <div class="site-menu__wrap">
   	<ul class="links">
   	  {% for path in site.data.menu %}
