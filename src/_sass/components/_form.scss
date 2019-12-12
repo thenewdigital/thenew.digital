@@ -96,7 +96,6 @@ textarea {
 }
 
 .select-wrapper {
-	@include icon;
 	display: block;
 	position: relative;
 
@@ -141,7 +140,6 @@ input[type="radio"], {
 	z-index: -1;
 
 	& + label {
-		@include icon;
 		color: _palette(fg);
 		cursor: pointer;
 		display: inline-block;

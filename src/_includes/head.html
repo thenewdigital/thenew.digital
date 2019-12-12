@@ -8,8 +8,26 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic&display=swap" />
 	<link rel="stylesheet" media="print" href="{{ "assets/css/print.css" | relative_url }}" />
 	
-	<script>document.documentElement.classList.add('is-loading')</script>
+	<script>
+  	document.documentElement.classList.add('is-loading')
+  	
+    WebFontConfig = {
+      google: {
+        families: ['Source Sans Pro:300,300italic,600,600italic']
+      },
+      classes: false,
+      active: function() {
+        document.documentElement.classList.remove('is-loading')
+      }
+    }
+    
+    ;(function(d) {
+      const wf = d.createElement('script'), s = d.scripts[0]
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
+      wf.async = true
+      s.parentNode.insertBefore(wf, s)
+    })(document)
+  </script>
 </head>

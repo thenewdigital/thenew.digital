@@ -14,11 +14,6 @@
 {% include_relative components/tile.js %}
 
 function setup() {
-	window.addEventListener('load', function() {
-	  setTimeout(function() {
-	    document.documentElement.classList.remove('is-loading')
-	  }, 1)
-	})
 	window.addEventListener('unload', function() {
 	  setTimeout(function() {
 	    Array.from(document.querySelectorAll('.is-transitioning')).forEach(function(el) {

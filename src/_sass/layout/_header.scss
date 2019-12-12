@@ -25,6 +25,15 @@
 	top: 0;
 	width: 100%;
 	z-index: _misc(z-index-base);
+	
+	.logo, nav {
+	  transition: opacity _duration(banner) ease;
+	  transition-delay: 0.75s;
+	  
+	  :root.is-loading & {
+  		opacity: 0;
+  	}
+	}
 
 	.logo {
 		border: 0;
@@ -132,12 +141,6 @@
 		background-color: transparent;
 		box-shadow: none;
 		position: absolute;
-		transition: opacity _duration(banner) ease;
-	  transition-delay: 0.75s;
-	  
-	  :root.is-loading & {
-  		opacity: 0;
-  	}
 
 		&.style1 { .logo { strong { color: _palette(accent1); } } }
 		&.style2 { .logo { strong { color: _palette(accent2); } } }

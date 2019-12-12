@@ -22,14 +22,7 @@
     border: none !important;
   }
   
-  a {
-    border-bottom: none !important;
-    border-style: solid;
-    text-decoration: underline;
-  }
-  
   a[href]::after {
-    text-decoration: none;
     content: ' ('attr(href)')';
     word-break: break-word;
   }

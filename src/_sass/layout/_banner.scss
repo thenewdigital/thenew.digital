@@ -25,7 +25,7 @@
 	  padding: 6em 0;
 	}
 
-	&::after {
+	&::after { // screen effect on any bg image
 		background-color: _palette(bg);
 		content: '';
 		display: block;
@@ -71,13 +71,6 @@
 			> :first-child {
 				margin-left: 0;
 			}
-
-			// p {
-			// 	font-size: 0.7em;
-			// 	font-weight: _font(weight-bold);
-			// 	letter-spacing: _font(letter-spacing-alt);
-			// 	text-transform: uppercase;
-			// }
 		}
 	}
 
@@ -94,10 +87,6 @@
 	&.style6::after { background-color: _palette(accent6); }
 
 	:root.is-loading & {
-		&::after {
-			opacity: 1.0;
-		}
-
 		> .inner {
 		  filter: blur(0.125em);
 		  transform: translateX(-0.5em);
