@@ -1,8 +1,11 @@
 -
   date: 2020-02-01T00:00:00
+  icon: 'https://www.northcentralcollege.edu/sites/default/files/favicon_0.png'
+  color: '#f8505c'
   tba: true
   types:
     - talk
     - demo
   venue: North Central College
-  location: Naperville, IL
+  url: http://northcentralcollege.edu
+  location: Naperville (IL)

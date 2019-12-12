@@ -2,7 +2,22 @@
 {% if events.size > 0 %}
 <ul class="alt">
   {% for event in upcoming %}
-    <li>{{event.location}}</li>
+    <li class="event">
+      <span class="label event-type">{{ event.types | join: ", " }}</span><br/>
+      <h4 class="event-venue">
+        <a href="{{event.url}}"{% if event.color %} style="color: {{event.color}}"{% endif %}>
+          {% if event.icon %}
+          <img class="event-icon" src="{{ event.icon }}" alt="" onerror="this.style.display='none'" />
+          {% endif %}
+          {{event.venue}}
+        </a>
+      </h4>
+      <div class="event-details">
+        {{event.location}},
+        {{ event.date | date: "%b %Y" }}
+        {% if event.tba %}&mdash; Full details TBA{% endif %}
+      </div>
+    </li>
   {% endfor %}
 </ul>
 {% endif %}
