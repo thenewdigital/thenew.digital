@@ -5,9 +5,6 @@
 
 [build.processing]
   skip_processing = false
-[build.processing.css]
-  bundle = false
-  minify = true
 [build.processing.js]
   bundle = false
   minify = true

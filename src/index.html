@@ -7,11 +7,14 @@ header_alt: true
 <!-- Banner -->
 <header id="banner" class="banner primary">
   <div class="inner">
-    {% assign problem = site.pages | where:"path","pages/problem.md" |first %}
-    <h1 class="major fit">{{problem.tile_title | default: problem.title}}</h1>
+    {% assign manifesto = site.posts | where:"title","Manifesto" | first %}
+    <h1 class="major fit">
+      <span class="label">{% include icon.html icon="star" %}Start here</span><br/>
+      {{manifesto.tile_title | default: manifesto.title}}
+    </h1>
     <div class="content">
-      {{problem.description|markdownify}}
-      <a href="{{ problem.url }}" class="cta button next">{{problem.title}}</a>
+      {{manifesto.description|markdownify}}
+      <a href="{{ manifesto.url }}" class="cta button next special">{{manifesto.title}}</a>
     </div>
   </div>
 </header>
@@ -21,15 +24,7 @@ header_alt: true
   
   <section class="tiles">
     {% include tile.html page='pages/about.md' %}
-    {% include tile.html page='pages/solution.md' %}
-    <article class="tile style3">
-      <h3 class="tile__title major">Take Action</h3>
-      <p>Current solutions already exist, and we can take simple immediate steps to incentivize more.</p>
-      <ul class="actions">
-        <li><a href="{% link pages/recommended-products.md %}" class="button next scrolly">Recommended Products</a></li>
-        <li><a href="/petition" class="button special">Petition for Change</a></li>
-      </ul>
-    </article>
+    {% include tile.html page='pages/alternatives.md' %}
   </section>
 
 </main>

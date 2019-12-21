@@ -1,21 +1,27 @@
 ---
 layout: default
+banner: true
 ---
 
 <main role="main" id="main">
 
   <div class="inner">
-    {% unless page.banner %}
-    <h1 class="major">{{page.title}}</h1>
-    {% endunless %}
-    {% if page.print-only == false %}
-    {{content}}
-    {% else %}
     <div class="box no-print">
-      <p>The Internet is great; screens we view it on aren't. To not contribute to the growing screen addiction crisis, this article is available for print or in audio format on The New Digital Podcast.</p>
+      <p>
+        Screens introduce unintentional cognitive effects, as discussed in
+        {% if page.title == 'Manifesto' %}this article{% else %}<a href="/manifesto">our manifesto</a>{% endif %}. For that reason, this article is available in print{% if page.podcast %} or audio format on <a href="/podcast">The New Digital Podcast</a>{% endif %}.
+      </p>
       
-      {% assign words = content | number_of_words %}
+      {% if page.podcast %}
+      <iframe class="podcast"
+        src="{{page.podcast}}"
+        onload="this.classList.add('loaded')"
+        frameborder="0" scrolling="no"
+      ></iframe>
+      {% endif %}
+      
       <button onclick="print()" class="button big fit special">
+        {% assign words = content | number_of_words %}
         {% include icon.html icon="print" %}
         <div>
           Print article<br/>
@@ -25,10 +31,9 @@ layout: default
         </div>
       </button>
     </div>
-    <div class="print-only">
+    <article class="print-only">
 	  {{ content }}
-	  </div>
-	  {% endif %}
+	  </article>
 	</div>
 
 </main>

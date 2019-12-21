@@ -12,6 +12,13 @@
 	
 	<script>
   	document.documentElement.classList.add('is-loading')
+  	{% comment %}
+  	{% if page.path != "index.html" %}
+  	if (sessionStorage && sessionStorage.getItem('previous') === '{% link index.html %}') {
+  	  document.documentElement.classList.add('is-from-home')
+  	}
+  	{% endif %}
+  	{% endcomment %}
   	
     WebFontConfig = {
       google: {

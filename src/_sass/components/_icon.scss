@@ -9,12 +9,12 @@
 .icon {
 	border-bottom: none;
 	display: inline-block;
+  vertical-align: middle;
 	position: relative;
+	top: -0.05em;
 
 	svg {
 	  fill: currentColor;
-	  display: inline-block;
-	  vertical-align: middle;
 	  width: 1em;
 	}
 

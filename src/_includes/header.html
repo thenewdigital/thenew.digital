@@ -1,6 +1,20 @@
 <!-- Header -->
-<header class="site-header{% if page.banner or page.header_alt %} alt {{page.theme}}{% endif %}">
-	<a href="{% link index.html %}" class="logo"><span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong></a>
+<header class="site-header{% if page.banner or layout.banner or page.header_alt %} alt {{page.theme}}{% endif %}">
+	<a class="logo"
+	  href="{% link index.html %}"
+	  {% comment %}
+	  {% if page.path != "index.html" %}
+	  onclick="return sessionStorage && sessionStorage.getItem('previous') === '{% link index.html %}' ? window.history.back() || false : undefined"
+	  {% endif %}
+	  {% endcomment %}
+	>
+	  {% comment %}
+	  {% if page.path != "index.html" %}
+	  {% include icon.html icon="left" %}
+	  {% endif %}
+	  {% endcomment %}
+	  <span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong>
+	</a>
 	<nav>
 		<a href="#menu"><span>Menu</span></a>
 	</nav>
@@ -10,13 +24,18 @@
 <nav class="site-menu" id="menu">
   <div class="site-menu__wrap">
   	<ul class="links">
-  	  {% for path in site.data.menu %}
-    	  {% assign p = site.pages | where:"path",path | first %}
-    	  <li><a href="{{p.url}}">{{p.title}}</a></li>
-  	  {% endfor %}
+  	  <li><a href="{% link index.html %}">Home</a></li>
+  	  <li><a href="{% link pages/about.md %}">About</a></li>
+  	  <li><a href="{% link _posts/2019-12-18-manifesto.md %}">Manifesto</a></li>
+  	  <li><a href="/">Articles/Podcast</a></li>
+  	  <li><a href="{% link pages/alternatives.md %}">Alternative Technology</a></li>
+
+  	  <li><a href="{% link pages/speaking.md %}">Speaking</a></li>
   	</ul>
+  	{% comment %}
   	<ul class="actions vertical">
   		<li><a href="/petition" class="button special fit">Petition for Change</a></li>
   	</ul>
+  	{% endcomment %}
 	</div>
 </nav>

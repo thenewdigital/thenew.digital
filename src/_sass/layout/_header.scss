@@ -44,6 +44,7 @@
 		height: inherit;
 		line-height: inherit;
 		padding: 0 1.5em;
+		position: relative;
 
 		strong {
 			background-color: _palette(fg-bold);
@@ -56,6 +57,27 @@
 		    background-color _duration(transition) ease-in-out,
 		    color _duration(transition) ease-in-out
 		  ;
+		}
+		
+		:root.is-from-home & {
+		  padding-left: calc(28px + 1.75em);
+		}
+		
+		:root:not(.is-from-home) & .icon-left {
+		  display: none;
+		}
+		
+		.icon-left {
+		  left: 0.5em;
+		  line-height: 1;
+		  position: absolute;
+		  margin-top: -12px;
+		  top: 50%;
+		  
+		  svg {
+  		  height: 24px;
+  		  width: 36px;
+  		}
 		}
 
 		&:hover {
@@ -90,6 +112,11 @@
 
 			&:last-child {
 				padding-right: 1.5em;
+			}
+			
+			.icon {
+			  margin-right: 0.333em;
+			  top: -0.1em;
 			}
 
 			&[href="#menu"] {

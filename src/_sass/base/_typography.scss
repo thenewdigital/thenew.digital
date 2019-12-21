@@ -77,11 +77,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 2.5em;
+	font-size: 2.5rem;
+	
+	.label {
+	  color: _palette(accent3);
+	  font-size: 1.2rem;
+	  
+	  .icon {
+	    margin-right: 0.5em;
+	  }
+	}
 }
 
 h2 {
-	font-size: 1.75em;
+	font-size: 1.75rem;
 	
 	&.numbered {
 	  counter-increment: h2;
@@ -95,7 +104,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.35em;
+	font-size: 1.35rem;
 	
 	&.numbered {
 	  counter-increment: h3;
@@ -108,7 +117,7 @@ h3 {
 }
 
 h4 {
-	font-size: 1.1em;
+	font-size: 1.1rem;
 	
 	&.numbered {
 	  counter-increment: h4;
@@ -120,11 +129,11 @@ h4 {
 }
 
 h5 {
-	font-size: 0.9em;
+	font-size: 0.9rem;
 }
 
 h6 {
-	font-size: 0.7em;
+	font-size: 0.7rem;
 }
 
 .major {
@@ -161,15 +170,15 @@ h6 {
 
 @include breakpoint(small) {
 	h1 {
-		font-size: 2em;
+		font-size: 2rem;
 	}
 
 	h2 {
-		font-size: 1.5em;
+		font-size: 1.5rem;
 	}
 
 	h3 {
-		font-size: 1.25em;
+		font-size: 1.25rem;
 	}
 }
 
@@ -190,6 +199,10 @@ blockquote {
 	font-style: italic;
 	margin: 0 0 _size(element-margin) 0;
 	padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	
+	> :last-child {
+	  margin-bottom: 0;
+	}
 }
 
 code {

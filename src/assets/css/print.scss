@@ -15,6 +15,7 @@
 
 :root {
   font-size: 12pt;
+  line-height: 1.5;
 }
 
 [role="main"] {
@@ -46,6 +47,11 @@ h3 {
 
 h4 {
   font-size: 1em !important;
+}
+
+blockquote {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 .logo {

@@ -8,7 +8,7 @@
 
 {% include head.html %}
 
-<body>
+<body onunload="('sessionStorage' in window) && sessionStorage.setItem('previous', '{{page.url}}')">
 
     {% include header.html %}
     {% include banner.html %}
