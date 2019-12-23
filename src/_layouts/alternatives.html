@@ -2,26 +2,27 @@
 layout: default
 ---
 
+<!-- Gradients -->
+<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; pointer-events: none; opacity: 0; left: 0; top: 0; height: 0; width: 0;">
+  <defs>
+    <linearGradient id="gradient-color" x1="0" x2="70" y1="0" y2="0" gradientUnits="userSpaceOnUse" >
+      <stop stop-color="#ec8d81" offset="0%"/>
+      <stop stop-color="#6fc3df" offset="100%"/>
+    </linearGradient>
+    <linearGradient id="gradient-grayscale" x1="0" x2="130" y1="0" y2="0" gradientUnits="userSpaceOnUse" >
+      <stop stop-color="gray" offset="0%"/>
+      <stop stop-color="white" offset="100%"/>
+    </linearGradient>
+  </defs>
+</svg>
+
 <main role="main" id="main">
 
   <div class="inner">
     {{ content }}
-  </div>
 
-  <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; pointer-events: none; opacity: 0; left: 0; top: 0; height: 0; width: 0;">
-    <defs>
-      <linearGradient id="gradient-color" x1="0" x2="70" y1="0" y2="0" gradientUnits="userSpaceOnUse" >
-        <stop stop-color="#ec8d81" offset="0%"/>
-        <stop stop-color="#6fc3df" offset="100%"/>
-      </linearGradient>
-      <linearGradient id="gradient-grayscale" x1="0" x2="130" y1="0" y2="0" gradientUnits="userSpaceOnUse" >
-        <stop stop-color="gray" offset="0%"/>
-        <stop stop-color="white" offset="100%"/>
-      </linearGradient>
-    </defs>
-  </svg>
   {% for category in site.data.products %}
-    <div class="inner"{% if forloop.first %} style="border-top: none; padding-top: 0"{% endif %}>
+    {% unless forloop.first %}<div class="inner">{% endunless %}
       <h2 class="major">{{category.category}}</h2>
       {% if category.description %}{{category.description | markdownify}}{% endif %}
     </div>

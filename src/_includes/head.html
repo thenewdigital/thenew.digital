@@ -10,6 +10,14 @@
 	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
 	<link rel="stylesheet" media="print" href="{{ "assets/css/print.css" | relative_url }}" />
 	
+	{% assign styles = layout.style %}
+	{% if page.style %}{% assign styles = styles | append: ',' | append: page.style %}{% endif %}
+	{% assign styles = styles | split: ',' %}
+	{% for style in styles %}
+  {% capture styleText %}{% include sass/{{style}} %}{% endcapture %}
+  <style>{{ styleText | scssify | strip }}</style>
+	{% endfor %}
+	
 	<script>
   	document.documentElement.classList.add('is-loading')
   	{% comment %}

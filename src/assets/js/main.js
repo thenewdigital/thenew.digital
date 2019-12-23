@@ -12,6 +12,7 @@
 {% include_relative components/site-header.js %}
 {% include_relative components/menu.js %}
 {% include_relative components/tile.js %}
+{% include_relative components/podcast.js %}
 
 function setup() {
 	window.addEventListener('unload', function() {
@@ -24,6 +25,7 @@ function setup() {
 	
 	SiteHeader.bootstrap()
 	Menu.bootstrap()
+	Podcast.bootstrap()
 	Tile.bootstrap()
 }
 

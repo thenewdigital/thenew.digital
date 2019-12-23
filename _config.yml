@@ -38,5 +38,7 @@ uncss:
     - "/\\.fonts-active/"
     - "/\\.is-menu-visible/"
     - "/\\.is-transitioning/"
+    - "/\\.podcast.loaded/"
+    - "/\\.podcast.full/"
   timeout: 30
   

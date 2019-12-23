@@ -4,7 +4,7 @@ layout: default
 
 <main role="main" id="main" class="alt">
   
-  <section>
+  <section id="story">
   	<div class="inner">
   		<h1 class="major">{{page.tile_title | default: page.title}}</h1>
   		<div class="row">
@@ -12,7 +12,7 @@ layout: default
           {{content}}
         </div>
         <div class="4u 12u$(medium)">
-          <img src="{{site.baseurl}}{{page.headshot}}" alt="{{page.headshot_alt}}" />
+          <img src="{{page.headshot | relative_url}}" alt="{{page.headshot_alt}}" />
         </div>
       </div>
     </div>
@@ -41,5 +41,13 @@ layout: default
       </div>
     </div>
   </section>
+  {% if page.acknowledgments %}
+  <section id="consultants">
+    <div class="inner">
+      <h2 class="major">Acknowledgments</h2>
+      {{page.acknowledgments}}
+    </div>
+  </section>
+  {% endif %}
   
 </main>

@@ -9,7 +9,7 @@
       description: |-
         Hisense is soon releasing this budget-friendly (~$185) E Ink smartphone that will run Android 9.0 with Google Play support. It's already been released in China and is receiving amazing reviews. [Here’s a video of it in action](), and [more information]() about its features and release.
         
-        Judging from the video, this looks to be by far the best replacement for a modern smartphone and the best executed E Ink device I’ve ever seen.
+        Judging from the video, this looks to be by far the best replacement for a modern smartphone and one of the best executed E Ink devices ever made.
     -
       name: Kingrow K1
       display: grayscale
@@ -28,7 +28,7 @@
 -
   category: 'E-readers'
   description: |-
-    Anything featuring an E Ink screen, which is most available e-readers including the Kindle, will work well. I would personally opt for models without a front-light as those likely introduce the same [flickering-induced health effects](/solution#flicker) seen with backlit screens.
+    Anything featuring an E Ink screen, which is most available e-readers including the Kindle, will work well. Models without a front-light would be preferred for reasons discussed in [the manifesto](/manifesto).
 -
   category: 'Tablets/computers'
   products:
@@ -38,21 +38,21 @@
       image: /assets/images/products/onyxboox.jpg
       image_credit: Onyx Boox
       description: |-
-        Onyx is a Chinese computer manufacturer specializing in e-reading devices. Their latest devices feature Android 9.0 with full Google Play support, making them. Their prices are comparable to iPads, with smaller 10" models around ~$500 and the largest 13" models (Boox Max 2 & Boox Max 3) around ~$750-$850. I personally use a Boox Max 3 as a laptop replacement with an external mouse and keyboard; it works fairly well though Android's tablet support is fairly limited. Still, most Android apps run on them without a hitch, so these devices would likely work well for students.
+        Onyx is a Chinese computer manufacturer specializing in e-reading devices. Their latest devices feature Android 9.0 with full Google Play support, making them. Their prices are comparable to iPads, with smaller 10" models around ~$500 and the largest 13" models (Boox Max 2 & Boox Max 3) around ~$750-$850. I personally use a Boox Max 3 as a laptop replacement with an external mouse and keyboard; it works fairly well though Android's tablet support is  limited. Still, most Android apps run without a hitch, so these devices would likely work well for students.
     -
       name: Toshiba Portege R500/R600
       display: color
       image: /assets/images/products/portege.jpg
       image_credit: Wired
       description: |-
-        Toshiba released these two netbooks over 10 years ago with one special characteristic: a "transflective" display, a combination of a normal transmissive LCD and a reflective LCD. There's a button right above the keyboard to turn the backlight completely off, and with a strong enough light in front (or direct sunlight) it can be used in full reflective mode. They're usually sold for very cheap (<$150) and work reasonably well but are definitely on the slow side by today's comparisons. I'm using the Portege R500 to create this website and it's been indispensable. One of only a couple options if you need color, but they're very hard to find.
+        Toshiba released these two netbooks over 10 years ago with one special characteristic: a "transflective" display, a combination of a normal transmissive LCD and a reflective LCD. There's a button right above the keyboard to turn the backlight completely off, and with a strong enough light in front (or direct sunlight) it can be used in full reflective mode. They're usually sold for very cheap (<$150) and work reasonably well but are definitely on the slow side by today's comparisons. The Portege R500 was used to create this website and was indispensable. One of only a couple options if you need color, but they're very hard to find.
     -
       name: Dell Latitude E6240 XFR
       display: color
       image: /assets/images/products/xfr.jpg
       image_credit: Dell
       description: |-
-        Similar to the Toshiba netbooks, this is a version of Dell's Latitude E6240 laptop made for military purposes and featuring the same type of transflective screen. These things are tanks, but the screen is larger and the specs are better than the Toshiba. They're slightly more expensive at $325 used, but they're much easier to find. Fair warning: I haven't used this device so I'm not sure if the backlight can be turned completely off. If someone has used one I'd love to hear how it works.
+        Similar to the Toshiba netbooks, this is a version of Dell's Latitude E6240 laptop made for military purposes and featuring the same type of transflective screen. These are rugged, bulky machines, but the screen is larger and the hardwware specs are better than the Toshibas. They're slightly more expensive at $325 used, but they're much easier to find. Fair warning: I haven't used this device so I'm not sure if the backlight can be turned completely off. If someone has used one I'd love to hear how it works.
 -
   category: 'External monitors'
   products:
@@ -62,14 +62,14 @@
       image: /assets/images/products/paperlike.jpg
       image_credit: Sol Computer
       description: |-
-        [Dasung](http://dasungtech.com/) is a Chinese company that makes HDMI-compatible E Ink computer monitors, and their latest models are fast enough to watch videos. Their Paperlike HD 2019 was the monitor that changed my life, though it's ridiculously expensive (no economies of scale). Being E Ink, they're limited to grayscale but they function very reliably. I'd look for a used Paperlike Pro or HD on eBay to save on costs.
+        [Dasung](http://dasungtech.com/) is a Chinese company that makes HDMI-compatible E Ink computer monitors, and their latest models are fast enough to watch videos. Their Paperlike HD 2019 was the monitor that led to the creation of this website, though it's quite expensive without the economies of scale of conventional screens. Being E Ink, they're limited to grayscale but they function very reliably. Used Paperlike Pros or HDs can be found on eBay to save on costs.
     -
       name: Onyx Boox Max 2/3
       display: grayscale
       image: /assets/images/products/booxmax3.jpg
       image_credit: The eBook Reader Blog
       description: |-
-        The Onyx Boox Max 2 and Max 3 (mentioned above) both offer HDMI support to use as computer monitors, but reports from buyers trying to use the Max 2 as a computer monitor are [overwhelming negative]() due to the input lag. I've used the Max 3 as a monitor and it works fairly well, though. In either case, both make good enough E Ink Android tablets to recommend.
+        The Onyx Boox Max 2 and Max 3 (mentioned above) both offer HDMI support to use as computer monitors, but reports from buyers trying to use the Max 2 as a computer monitor are [overwhelming negative]() due to the input lag. The Max 3 works fairly well as a monitor, though. In either case, both make good enough E Ink Android tablets to recommend.
 -
   category: 'Gaming'
   products:

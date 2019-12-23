@@ -19,7 +19,6 @@
   }
 
   SiteHeader.prototype.handleWaypoint = function(direction) {
-    console.log(direction)
     if (direction === 'down') {
       this.el.classList.remove('alt')
       this.el.classList.add('reveal')
