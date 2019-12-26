@@ -20,6 +20,8 @@
 	
 	<script>
   	document.documentElement.classList.add('is-loading')
+  	{% if site.donorbox %}window.DonorBox = { widgetLinkClassName: 'dbox-popup' }{% endif %}
+  	
   	{% comment %}
   	{% if page.path != "index.html" %}
   	if (sessionStorage && sessionStorage.getItem('previous') === '{% link index.html %}') {
@@ -42,12 +44,9 @@
       },
       timeout: 2000
     }
-    
-    ;(function(d) {
-      const wf = d.createElement('script'), s = d.scripts[0]
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js'
-      wf.async = true
-      s.parentNode.insertBefore(wf, s)
-    })(document)
   </script>
+  <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  
+	{% if site.donorbox %}<script defer src="https://donorbox.org/install-popup-button.js"></script>{% endif %}
+	<script defer src="{{ "/assets/js/main.js" | relative_url}}"></script>
 </head>

@@ -16,6 +16,7 @@
 	  <span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong>
 	</a>
 	<nav>
+	  {% if site.donorbox %}<a class="dbox-popup button style6" href="{{site.donorbox}}">Donate</a>{% endif %}
 		<a href="#menu"><span>Menu</span></a>
 	</nav>
 </header>
@@ -26,7 +27,7 @@
   	<ul class="links">
   	  <li><a href="{% link index.html %}">Home</a></li>
   	  <li><a href="{% link pages/about.md %}">About</a></li>
-  	  <li><a href="{% link _posts/2019-12-18-manifesto.md %}">Manifesto</a></li>
+  	  <li><a href="{% link _posts/2019-12-18-manifesto.md %}">{% include icon.html icon="star" %} Manifesto</a></li>
   	  {% comment %}<li><a href="/">Articles/Podcast</a></li>{% endcomment %}
   	  <li><a href="{% link pages/alternatives.md %}">Alternative Technology</a></li>
 

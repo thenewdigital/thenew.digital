@@ -41,3 +41,7 @@ a:hover .icon.alt {
 a:active .icon.alt {
 	background-color: desaturate(darken(_palette(accent1), 15), 5);
 }
+
+.icon-star {
+  color: _palette(accent3);
+}

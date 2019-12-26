@@ -23,13 +23,21 @@
     border: none !important;
   }
   
-  a[href]::after {
+  a[href]:not(.footnote):not(.reversefootnote)::after {
     content: ' ('attr(href)')';
     word-break: break-word;
   }
   
-  a[href^="/"]::after {
+  a[href^="/"]:not(.footnote):not(.reversefootnote)::after {
     content: ' ({{site.url}}'attr(href)')';
+  }
+  
+  a.footnote {
+    border-bottom: none;
+  }
+  
+  a.reversefootnote {
+    display: none;
   }
 }
 

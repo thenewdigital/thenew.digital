@@ -17,6 +17,10 @@
 [[redirects]]
   from = "/petition"
   to = "https://www.change.org/p/19355783/"
+  
+[[redirects]]
+  from = "/donate"
+  to = "https://donorbox.org/support-the-new-digital"
 
 [[redirects]]
   from = "/podcast"

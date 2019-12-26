@@ -111,7 +111,11 @@ h3 {
 	  counter-reset: h4;
 	  
 	  &::before {
-  	  content: counter(h2)'.'counter(h3)' ';
+	    content: counter(h3)'. ';
+  	  
+  	  h2.numbered ~ & {
+  	    content: counter(h2)'.'counter(h3)' ';
+  	  }
 	  }
 	}
 }
@@ -123,7 +127,15 @@ h4 {
 	  counter-increment: h4;
 	  
 	  &::before {
-  	  content: counter(h2)'.'counter(h3)'.'counter(h4)' ';
+	    content: counter(h4)'. ';
+	    
+	    h3.numbered ~ & {
+    	  content: counter(h3)'.'counter(h4)' ';
+	    }
+	    
+	    h2.numbered ~ h3.numbered ~ & {
+	      content: counter(h2)'.'counter(h3)'.'counter(h4)' ';
+	    }
 	  }
 	}
 }
@@ -151,7 +163,7 @@ h6 {
     content: '';
     border-bottom: 2px solid;
     display: block;
-    margin: 0.5em 0 0.75em;
+    margin: 0.5em 0 0;//0.75em;
     width: 100%;
 	}
 }
@@ -160,6 +172,10 @@ h6 {
   font-style: italic;
   font-size: 0.8em;
 }
+
+  p.caption {
+    margin-bottom: 1.5em;
+  }
 
 .label {
   font-size: 0.8em;
