@@ -25,13 +25,14 @@
 <nav class="site-menu" id="menu">
   <div class="site-menu__wrap">
   	<ul class="links">
-  	  <li><a href="{% link index.html %}">Home</a></li>
-  	  <li><a href="{% link pages/about.md %}">About</a></li>
-  	  <li><a href="{% link _posts/2019-12-18-manifesto.md %}">{% include icon.html icon="star" %} Manifesto</a></li>
-  	  {% comment %}<li><a href="/">Articles/Podcast</a></li>{% endcomment %}
-  	  <li><a href="{% link pages/alternatives.md %}">Alternative Technology</a></li>
-
-  	  <li><a href="{% link pages/speaking.md %}">Speaking</a></li>
+  	  {% assign pages = site.pages | concat: site.posts %}
+  	  {% for item in site.data.sitemap %}
+    	  {% assign path = item.path | default: item %}
+    	  {% assign p = pages | where:"path", path | first %}
+    	  <li{% if page.path == p.path %} class="is-active"{% endif %}>
+    	    <a href="{{p.url}}">{{p.title}}</a>
+    	  </li>
+  	  {% endfor %}
   	</ul>
   	{% comment %}
   	<ul class="actions vertical">
