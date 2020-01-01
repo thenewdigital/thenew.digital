@@ -9,7 +9,7 @@ banner: true
     <div class="box no-print">
       <p>
         Screens introduce unusual cognitive effects as discussed in
-        {% if page.title == 'Manifesto' %}this article{% else %}<a href="/manifesto">our manifesto</a>{% endif %}. For that reason, this article is available in print{% if page.podcast %} or audio format on <a href="/podcast">The New Digital Podcast</a>{% endif %}.
+        {% if page.title == 'Manifesto' %}this article{% else %}<a href="{% link _posts/2019-12-18-manifest.md %}">our manifesto</a>{% endif %}. For that reason, this article is available in print{% if page.podcast %} or audio format on <a href="/podcast">The New Digital Podcast</a>{% endif %}.
       </p>
       
       {% if page.podcast %}
@@ -21,7 +21,7 @@ banner: true
       {% endif %}
       
       <button onclick="print()" class="button big fit special">
-        {% assign words = content | split: '<!--extra-->' | first | number_of_words %}
+        {% assign words = page.content | split: '<!--extra-->' | first | number_of_words %}
         {% include icon.html icon="print" %}
         <div>
           Print article<br/>
