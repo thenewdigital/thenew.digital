@@ -29,5 +29,5 @@
 [[redirects]]
  from = "*"
  to = "https://link.medium.com/J1OZLWDAX2"
- status = 301
+ status = 302
  force = true
