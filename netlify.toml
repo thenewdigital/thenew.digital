@@ -27,7 +27,7 @@
   to = "https://anchor.fm/thenewdigital"
   
 [[redirects]]
- from = "*"
+ from = "/"
  to = "https://link.medium.com/J1OZLWDAX2"
  status = 302
  force = true
