@@ -7,16 +7,25 @@
       image: /assets/images/products/hisense-a5.jpg
       image_credit: Notebook Italia (@notebookitalia) on Twitter
       description: |-
-        Hisense is soon releasing this budget-friendly (~$185) E Ink smartphone that will run Android 9.0 with Google Play support. It's already been released in China and is receiving amazing reviews. [Here’s a video of it in action](), and [more information]() about its features and release.
+        Hisense released this budget-friendly (~$185) E Ink smartphone that runs Android 9.0 (no Google Play support). The phone is unlocked, supports English, and works on many carriers. I haven't used one yet but it's receiving amazing reviews so far. [Here’s a video of it in action](https://www.youtube.com/watch?v=WL4MZnsrKyQ), and [more information](https://www.cect-shop.com/en/hisense-a5.html) about its features.
         
         Judging from the video, this looks to be by far the best replacement for a modern smartphone and one of the best executed E Ink devices ever made.
+      actions:
+        -
+          label: Buy from CECT-Shop ($223)
+          special: true
+          url: https://www.cect-shop.com/en/hisense-a5.html
     -
       name: Kingrow K1
       display: grayscale
       image: /assets/images/products/kingrow-k1.jpg
       image_credit: Good e-Reader
       description: |-
-        Another smartphone with a Android 8.0 but no Google Play support. This one is pricier but apparently in production after a successful Kickstarter.
+        This is another smartphone with a Android 8.0 but no Google Play support. This one is pricier than the A5 but apparently in production after a successful Kickstarter.
+      actions:
+        -
+          label: Indiegogo Campaign
+          url: https://www.indiegogo.com/projects/kingrow-k1-the-healthy-phone-cares-your-eyes#/
     -
       name: Light Phone II
       display: grayscale
@@ -24,11 +33,16 @@
       image_credit: PCMag.com
       description: |-
         An intentionally stripped-down E Ink phone promising only the basic tools to eliminate distraction. The company’s Kickstarter campaign was extremely successful and they’ve been very transparent with their backers during production.
+      actions:
+        -
+          label: Pre-order from official site ($350)
+          url: https://www.thelightphone.com/products
+          special: true
 
 -
   category: 'E-readers'
   description: |-
-    Anything featuring an E Ink screen, which is most available e-readers including the Kindle, will work well. Models without a front-light would be preferred for reasons discussed in [the manifesto](/manifesto).
+    Anything featuring an E Ink screen, which is most available e-readers including the Kindle, will work well. Models without a front-light would be best.
 -
   category: 'Tablets/computers'
   products:
@@ -38,14 +52,18 @@
       image: /assets/images/products/onyxboox.jpg
       image_credit: Onyx Boox
       description: |-
-        Onyx is a Chinese computer manufacturer specializing in e-reading devices. Their latest devices feature Android 9.0 with full Google Play support, making them. Their prices are comparable to iPads, with smaller 10" models around ~$500 and the largest 13" models (Boox Max 2 & Boox Max 3) around ~$750-$850. I personally use a Boox Max 3 as a laptop replacement with an external mouse and keyboard; it works fairly well though Android's tablet support is  limited. Still, most Android apps run without a hitch, so these devices would likely work well for students.
+        Onyx is a Chinese computer manufacturer specializing in e-reading devices. Their latest devices are basically E Ink tablets with Android 9.0 and Google Play support. Their prices are comparable to iPads, with smaller 10" models around ~$500 and the largest 13" models (Boox Max 2 & Boox Max 3) around ~$750-$850. I personally use a Boox Max 3 as a laptop replacement with an external mouse and keyboard; it works fairly well though Android's tablet support is  limited. Still, most Android apps run without a hitch, so these devices would likely work well for students.
+      actions:
+        -
+          label: Onyx official site
+          url: http://onyxboox.com
     -
       name: Toshiba Portege R500/R600
       display: color
       image: /assets/images/products/portege.jpg
       image_credit: Wired
       description: |-
-        Toshiba released these two netbooks over 10 years ago with one special characteristic: a "transflective" display, a combination of a normal transmissive LCD and a reflective LCD. There's a button right above the keyboard to turn the backlight completely off, and with a strong enough light in front (or direct sunlight) it can be used in full reflective mode. They're usually sold for very cheap (<$150) and work reasonably well but are definitely on the slow side by today's comparisons. The Portege R500 was used to create this website and was indispensable. One of only a couple options if you need color, but they're very hard to find.
+        Toshiba released these two netbooks over 10 years ago with one special characteristic: a "transflective" display, a combination of a normal transmissive LCD and a reflective LCD. There's a button right above the keyboard to turn the backlight completely off, and with a strong enough light in front (or direct sunlight) it can be used in full reflective mode. They're usually sold for very cheap (<$150) and work reasonably well but are definitely on the slow side by today's comparisons. I use the Portege R500 as my personal computer and it's been absolutely invaluable. These are now very hard to find, but I've had luck on eBay and Offerup.
     -
       name: Dell Latitude E6240 XFR
       display: color
@@ -53,6 +71,11 @@
       image_credit: Dell
       description: |-
         Similar to the Toshiba netbooks, this is a version of Dell's Latitude E6240 laptop made for military purposes and featuring the same type of transflective screen. These are rugged, bulky machines, but the screen is larger and the hardwware specs are better than the Toshibas. They're slightly more expensive at $325 used, but they're much easier to find. Fair warning: I haven't used this device so I'm not sure if the backlight can be turned completely off. If someone has used one I'd love to hear how it works.
+      actions:
+        -
+          label: Buy used from Amazon ($300+)
+          special: true
+          url: https://www.amazon.com/gp/offer-listing/B00H5NDFGQ
 -
   category: 'External monitors'
   products:
@@ -62,7 +85,7 @@
       image: /assets/images/products/paperlike.jpg
       image_credit: Sol Computer
       description: |-
-        [Dasung](http://dasungtech.com/) is a Chinese company that makes HDMI-compatible E Ink computer monitors, and their latest models are fast enough to watch videos. Their Paperlike HD 2019 was the monitor that led to the creation of this website, though it's quite expensive without the economies of scale of conventional screens. Being E Ink, they're limited to grayscale but they function very reliably. Used Paperlike Pros or HDs can be found on eBay to save on costs.
+        [Dasung](http://dasungtech.com/) is a Chinese company that makes HDMI-compatible E Ink computer monitors, and their latest models are fast enough to watch videos. Their Paperlike HD 2019 was the monitor that led to the creation of this website, though it's quite expensive without the economies of scale of conventional screens. Being E Ink, they're limited to grayscale but they function very reliably. I'd recommend finding a used Paperlike Pros or HDs on eBay to save on costs.
     -
       name: Onyx Boox Max 2/3
       display: grayscale
@@ -70,6 +93,10 @@
       image_credit: The eBook Reader Blog
       description: |-
         The Onyx Boox Max 2 and Max 3 (mentioned above) both offer HDMI support to use as computer monitors, but reports from buyers trying to use the Max 2 as a computer monitor are [overwhelming negative]() due to the input lag. The Max 3 works fairly well as a monitor, though. In either case, both make good enough E Ink Android tablets to recommend.
+      actions:
+        -
+          label: Onyx official site
+          url: http://onyxboox.com
 -
   category: 'Gaming'
   products:
@@ -78,4 +105,4 @@
       display: color
       image: /assets/images/products/gba.jpg
       description: |-
-        The original Game Boy Advance was one of the last mass-produced color reflective LCDs, with a much improved panel over its predecessor, the Game Boy Color. These are cheap (~$30) and easy to find on sites like Craigslist, Offerup, and eBay.
+        The original Game Boy Advance was one of the last mass-produced color reflective LCDs, with a much improved panel over its predecessor, the Game Boy Color. Serious gamers are probably scoffing at this suggestion, but the Advance is cheap (~$30) and easy to find on sites like Craigslist, Offerup, and eBay.

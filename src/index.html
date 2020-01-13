@@ -7,14 +7,13 @@ header_alt: true
 <!-- Banner -->
 <header id="banner" class="banner primary">
   <div class="inner">
-    {% assign manifesto = site.posts | where:"title","Manifesto" | first %}
     <h1 class="major fit">
-      <span class="label">{% include icon.html icon="star" %}Start here</span><br/>
-      {{manifesto.tile_title | default: manifesto.title}}
+      {% comment %}<span class="label">{% include icon.html icon="star" %}Start here</span><br/>{% endcomment %}
+      Digital technology as it should be.
     </h1>
     <div class="content">
-      {{manifesto.description|markdownify}}
-      <a href="{{ manifesto.url }}" class="cta button next special">{{manifesto.title}}</a>
+      <p>Alternative screen technology lets us reap all the incredible benefits of screen technology without the unintended side effects&mdash;<strong>including addiction</strong>.</p>
+      <a href="/intro" class="cta button next special">Learn more</a>
     </div>
   </div>
 </header>
@@ -24,7 +23,7 @@ header_alt: true
   
   <section class="tiles">
     {% include tile.html page='pages/about.md' %}
-    {% include tile.html page='pages/recommended-products.md' %}
+    {% include tile.html page='recommended-products.html' %}
   </section>
 
 </main>

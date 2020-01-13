@@ -14,11 +14,6 @@
     <a href="{{page.cta.link}}" class="cta button special">{{page.cta.text}}</a>
     {% endif %}
     {% if page.cta %}</div>{% endif %}
-    {% if page.last_modified_at %}
-    <p class="caption">
-      Last updated on {{ page.last_modified_at | date: '%B %-d, %Y' }}
-    </p>
-    {% endif %}
     {% if page.description %}
     {{ page.description | markdownify }}
     {% endif %}

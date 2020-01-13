@@ -1,6 +1,8 @@
 - index.html
+-
+  url: /intro
+  title: Intro
 - pages/about.md
-- _posts/2019-12-18-manifesto.md
+- recommended-products.html
 # - articles.html
-- pages/recommended-products.md
 - pages/speaking.md

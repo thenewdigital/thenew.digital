@@ -15,10 +15,6 @@
   ENVIRONMENT = { JEKYLL_ENV = "production" }
   
 [[redirects]]
-  from = "/petition"
-  to = "https://www.change.org/p/19355783/"
-  
-[[redirects]]
   from = "/donate"
   to = "https://donorbox.org/support-the-new-digital"
 
@@ -27,7 +23,7 @@
   to = "https://anchor.fm/thenewdigital"
   
 [[redirects]]
- from = "/"
+ from = "/intro"
  to = "https://medium.com/p/reflective-screens-are-the-organic-food-of-digital-technology-b2fbd0767617?source=email-809a7cb04150--writer.postDistributed&sk=5183f15921c2a6e7cbc7056cb6204f7e"
- status = 302
+ status = 301
  force = true

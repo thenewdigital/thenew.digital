@@ -27,10 +27,9 @@
   	<ul class="links">
   	  {% assign pages = site.pages | concat: site.posts %}
   	  {% for item in site.data.sitemap %}
-    	  {% assign path = item.path | default: item %}
-    	  {% assign p = pages | where:"path", path | first %}
-    	  <li{% if page.path == p.path %} class="is-active"{% endif %}>
-    	    <a href="{{p.url}}">{{p.title}}</a>
+    	  {% assign p = pages | where:"path", item | first %}
+    	  <li{% if p and page.path == p.path %} class="is-active"{% endif %}>
+    	    <a href="{{item.url | default: p.url}}">{{item.title | default: p.title}}</a>
     	  </li>
   	  {% endfor %}
   	</ul>

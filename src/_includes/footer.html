@@ -3,7 +3,7 @@
 	<div class="inner">
 		<section>
 			<form action="https://formspree.io/{{ site.formspree_id }}" method="POST">
-			  <h3>{{page.contact_form_heading | default: "Get in Touch"}}{% comment %} 👋{% endcomment %}</h3>
+			  <h3>{{page.contact_form_heading | default: "Get in Touch 👋"}}</h3>
 			  {% if page.contact_email_subject %}
 			  <input type="hidden" name="subject" value="{{page.contact_email_subject}}" />
 			  {% endif %}
