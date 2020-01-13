@@ -1,8 +1,8 @@
 - index.html
+- pages/about.md
 -
   url: /overview
   title: Overview
-- pages/about.md
 - recommended-products.html
 # - articles.html
 - pages/speaking.md
