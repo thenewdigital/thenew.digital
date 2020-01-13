@@ -16,8 +16,8 @@
 					<input type="text" name="_replyto" id="email" required />
 				</div>
 				<div class="field half first">
-					<label for="name">Name (optional)</label>
-					<input type="text" name="name" id="name" />
+					<label for="name">Name{% unless page.contact_name_required %} (optional){% endunless %}</label>
+					<input type="text" name="name" id="name"{% if page.contact_name_required %} required{% endif %} />
 				</div>
 				<ul class="actions">
 					<li><input type="submit" value="Send Message" class="special" /></li>
