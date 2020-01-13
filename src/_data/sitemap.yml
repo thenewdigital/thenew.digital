@@ -1,7 +1,7 @@
 - index.html
 -
-  url: /intro
-  title: Intro
+  url: /overview
+  title: Overview
 - pages/about.md
 - recommended-products.html
 # - articles.html
