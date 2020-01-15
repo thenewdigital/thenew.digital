@@ -32,6 +32,10 @@
     content: ' ({{site.url}}'attr(href)')';
   }
   
+  figcaption a::after, .post-header a::after {
+    content: none !important;
+  }
+  
   a.footnote {
     border-bottom: none;
   }
@@ -42,19 +46,19 @@
 }
 
 h1 {
-  font-size: 2em !important;
+  font-size: 2rem !important;
 }
 
 h2 {
-  font-size: 1.5em !important;
+  font-size: 1.5rem !important;
 }
 
 h3 {
-  font-size: 1.2em !important;
+  font-size: 1.2rem !important;
 }
 
 h4 {
-  font-size: 1em !important;
+  font-size: 1rem !important;
 }
 
 blockquote {
@@ -68,7 +72,7 @@ blockquote {
 }
 
 .inner {
-  margin: 0 0 3em !important;
+  margin: 0 0 3rem !important;
   padding: 0 !important;
   width: auto !important;
 }
@@ -91,8 +95,8 @@ blockquote {
   border-bottom: 1px dotted gray !important;
   height: auto !important;
   min-height: 0 !important;
-  margin: 0 0 1.5em !important;
-  padding: 0 0 1.5em !important;
+  margin: 0 0 1.5rem !important;
+  padding: 0 0 1.5rem !important;
   position: static !important;
   
   .inner {

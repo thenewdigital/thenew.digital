@@ -2,10 +2,11 @@
   window.SiteHeader = function(header) {
     this.el = header
     
-    this.banner = Array.from(document.querySelectorAll('.banner'))
-      .filter(function (banner) {
-        return !banner.matches('main .banner')
-      })[0]
+    this.banner = document.querySelector('.post-header') ||
+      Array.from(document.querySelectorAll('.banner'))
+        .filter(function (banner) {
+          return !banner.matches('main .banner')
+        })[0]
 
     if (this.banner) {
       this.handleWaypoint = this.handleWaypoint.bind(this)

@@ -1,39 +1,60 @@
 ---
 layout: default
-banner: true
+header_alt: true
+contact_form_heading: Join the Discussion 💬
 ---
 
+{% assign pre_figure = content | split: '<figure' | first | remove: ' ' | strip_newlines %}
+{% assign starts_with_figure = false %}
+{% unless pre_figure and pre_figure != '' %}{% assign starts_with_figure = true %}{% endunless %}
+
 <main role="main" id="main">
-
-  <div class="inner">
-    <div class="box no-print">
-      <p>
-        Screens introduce unusual cognitive effects as discussed in
-        {% if page.title == 'Manifesto' %}this article{% else %}<a href="{% link _posts/2019-12-18-manifest.md %}">our manifesto</a>{% endif %}. For that reason, this article is available in print{% if page.podcast %} or audio format on <a href="/podcast">The New Digital Podcast</a>{% endif %}.
-      </p>
-      
-      {% if page.podcast %}
-      <iframe class="podcast"
-        src="{{page.podcast}}"
-        onload="this.classList.add('loaded')"
-        frameborder="0" scrolling="no"
-      ></iframe>
-      {% endif %}
-      
-      <button onclick="print()" class="button big fit special">
-        {% assign words = page.content | split: '<!--extra-->' | first | number_of_words %}
-        {% include icon.html icon="print" %}
-        <div>
-          Print article<br/>
-          <span class="label">
-            {% if words < 360 %}<1{% else %}{{ words | divided_by:180 }}{% endif %} min read
-          </span>
+  <article class="post">
+    <header class="post-header{% if starts_with_figure %} starts-with-figure{% endif %}">
+      <div class="inner">
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.subtitle %}
+        <h2 class="subtitle">{{ page.subtitle }}</h2>
+        {% endif %}
+        <div class="post-meta">
+          {% assign author = site.data.authors[page.author] %}
+          <img src="{{author.headshot}}" class="headshot post-headshot" alt="{{author.name}} headshot" />
+          <div>
+            <a href="{{author.url}}" class="post-author" rel="author">{{author.name}}</a>
+            <time datetime="{{page.date | date: "%F"}}" class="post-date" pubdate>{{page.date | date: "%A, %B %e, %Y" }}</time>
+          </div>
+          <div class="actions post-actions no-print">
+            <button onclick="print()" class="button">
+              {% include icon.html icon="print" %}
+              Print
+            </button>
+          </div>
         </div>
-      </button>
-    </div>
-    <article class="print-only">
-	  {{ content }}
-	  </article>
-	</div>
+      </div>
+    </header>
+    
+    {% if page.podcast %}
+      {% assign figure_split = content | split: '</figure>' %}
+      {% capture figure %}{{ figure_split | first }}</figure>{% endcapture %}
+      {% if starts_with_figure %}
+      {{ figure }}
+      {% endif %}
 
+      <div class="podcast-wrapper no-print">
+        <iframe class="podcast"
+          src="{{page.podcast}}"
+          onload="this.classList.add('loaded')"
+          frameborder="0" scrolling="no"
+        ></iframe>
+      </div>
+      
+      {% if starts_with_figure %}
+      {{ figure_split | join: '</figure>' | remove_first: figure }}
+      {% else %}
+      {{content}}
+      {% endif %}
+    {% else %}
+    {{content}}
+    {% endif %}
+  </article>
 </main>

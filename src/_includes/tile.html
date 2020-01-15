@@ -1,4 +1,4 @@
-{% assign p = site.pages | where:"path",include.page |first %}
+{% assign p = site.pages | where:"path",include.page | first %}
 <a class="tile {{ p.theme }}" href="{{ p.url | relative_url  }}"
   {% if p.image %}
   style="background-image: url({{p.image | relative_url}});"
