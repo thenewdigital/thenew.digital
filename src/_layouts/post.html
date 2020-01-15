@@ -18,7 +18,7 @@ contact_form_heading: Join the Discussion 💬
         {% endif %}
         <div class="post-meta">
           {% assign author = site.data.authors[page.author] %}
-          <img src="{{author.headshot}}" class="headshot post-headshot" alt="{{author.name}} headshot" />
+          <img src="{{author.headshot | relative_url}}" class="headshot post-headshot" alt="{{author.name}} headshot" />
           <div>
             <a href="{{author.url}}" class="post-author" rel="author">{{author.name}}</a>
             <time datetime="{{page.date | date: "%F"}}" class="post-date" pubdate>{{page.date | date: "%A, %B %e, %Y" }}</time>

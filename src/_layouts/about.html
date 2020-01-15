@@ -12,7 +12,8 @@ layout: default
           {{content}}
         </div>
         <div class="4u 12u$(medium)">
-          <img src="{{page.headshot | relative_url}}" alt="{{page.headshot_alt}}" />
+          {% assign max = site.data.authors.max %}
+          <img class="headshot" src="{{max.headshot | relative_url}}" alt="{{max.name}} headshot" />
         </div>
       </div>
     </div>
