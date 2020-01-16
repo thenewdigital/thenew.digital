@@ -1,19 +1,9 @@
 <!-- Header -->
 <header class="site-header{% if page.banner or layout.banner or page.header_alt or layout.header_alt %} alt {{page.theme}}{% endif %}">
-	<a class="logo"
-	  href="{% link index.html %}"
-	  {% comment %}
-	  {% if page.path != "index.html" %}
-	  onclick="return sessionStorage && sessionStorage.getItem('previous') === '{% link index.html %}' ? window.history.back() || false : undefined"
-	  {% endif %}
-	  {% endcomment %}
-	>
-	  {% comment %}
-	  {% if page.path != "index.html" %}
-	  {% include icon.html icon="left" %}
-	  {% endif %}
-	  {% endcomment %}
-	  <span>{{ site.titleLeft }}</span> <strong>{{ site.titleRight }}</strong>
+	<a class="logo" href="{% link index.html %}">
+	  {% assign splitTitle = site.title | split: ' ' %}
+	  {% assign titleLast = splitTitle | last %}
+	  <span>{{ site.title | remove: titleLast }}</span><strong>{{ titleLast }}</strong>
 	</a>
 	<nav>
 	  {% if site.donorbox %}<a class="dbox-popup button style6" href="{{site.donorbox}}">Donate</a>{% endif %}

@@ -183,7 +183,7 @@ h6 {
 	}
 }
 
-.caption {
+.caption, figcaption {
   font-style: italic;
   font-size: 0.8em;
 }
@@ -191,6 +191,12 @@ h6 {
   p.caption {
     margin-bottom: 1.5em;
   }
+  
+figcaption {
+  display: block;
+  text-align: center;
+  margin-top: 0.35rem;
+}
 
 .label {
   font-size: 0.8em;
@@ -229,7 +235,7 @@ blockquote {
 	border-left: solid 4px;
 	font-style: italic;
 	margin: 0 0 _size(element-margin) 0;
-	padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
+	padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) 1.333em;
 	
 	> :last-child {
 	  margin-bottom: 0;
@@ -264,100 +270,6 @@ hr {
 	margin: _size(element-margin) auto;
 	opacity: 0.7;
 	width: 8rem;
-}
-
-.post {
-  &-header {
-    font-size: 1rem;
-    
-    .inner {
-      padding-top: 3rem;
-    }
-  }
-  
-  &-meta {
-    align-items: center;
-    display: flex;
-    margin-top: 1rem;
-  }
-  
-  &-author {
-    font-size: 1.1rem;
-  }
-  
-  &-date {
-    display: block;
-    opacity: 0.7;
-  }
-  
-  &-actions {
-    margin-left: auto;
-
-    @include breakpoint(small) {
-      display: none;
-    }
-  }
-  
-  &-headshot {
-    height: 3.5rem;
-    margin-right: 0.75rem;
-  }
-  
-  padding-bottom: 4rem;
-  
-  @include breakpoint(small) {
-    padding-bottom: 3rem;
-  }
-  
-  @media screen {
-    font-size: 1.1rem;
-    @include breakpoint(small) {
-      font-size: 1rem;
-    }
-    
-    &-header:not(.starts-with-figure) {
-      border-bottom: 1px solid _palette(border);
-      margin-bottom: 3rem;
-    }
-    
-    > p, > blockquote, > ul, > ol,
-    > h1, > h2, > h3, > h4, > h5, > h6,
-    > .figure:not(.full), > .podcast-wrapper {
-      padding-left: 3rem;
-      padding-right: 3rem;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 46rem; // line length
-      
-      @include breakpoint(small) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-      }
-    }
-    
-    > blockquote {
-      border-left: none;
-      padding-left: 4.5rem;
-      position: relative;
-      
-      &::before {
-        border-left: 4px solid;
-        content: '';
-        left: 3rem;
-        position: absolute;
-        top: 0;
-        height: 100%;
-      }
-      
-      @include breakpoint(small) {
-        padding-left: 3rem;
-        
-        &::before {
-          left: 1.5rem;
-        }
-      }
-    }
-  }
 }
 
 .align-left {

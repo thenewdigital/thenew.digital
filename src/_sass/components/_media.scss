@@ -22,22 +22,8 @@
     margin-right: auto;
   }
   
-  figcaption {
-    display: block;
-    text-align: center;
-    font-style: italic;
-    margin-top: 0.35rem;
-  }
-  
   &.full figcaption {
-    max-width: _size(inner);
-    padding-left: 3rem;
-    padding-right: 3rem;
-    
-    @include breakpoint(small) {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
+    @include inner;
   }
   
   .imgs {

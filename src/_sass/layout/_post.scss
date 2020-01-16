@@ -1,0 +1,80 @@
+.post {
+  &-header {
+    font-size: 1rem;
+    
+    .inner {
+      padding-top: 3rem;
+    }
+  }
+  
+  &-info {
+    align-items: center;
+    display: flex;
+    margin-top: 1rem;
+    
+    @include breakpoint(small) {
+      flex-wrap: wrap;
+    }
+  }
+  
+  &-meta {
+    flex: 1;
+  }
+  
+  &-author {
+    font-size: 1.1rem;
+  }
+  
+  &-date {
+    display: block;
+    opacity: 0.7;
+  }
+  
+  &-external {
+    margin-left: _size(element-margin);
+    
+    @include breakpoint(small) {
+      margin-left: 0;
+      margin-top: 1.333rem;
+      width: 100%;
+    }
+  }
+  
+  &-actions {
+    margin-left: _size(element-margin);
+
+    @include breakpoint(small) {
+      display: none;
+    }
+  }
+  
+  &-headshot {
+    height: 3.5rem;
+    margin-right: 0.75rem;
+  }
+  
+  padding-bottom: 4rem;
+  
+  @include breakpoint(small) {
+    padding-bottom: 3rem;
+  }
+  
+  @media screen {
+    font-size: 1.1rem;
+    @include breakpoint(small) {
+      font-size: 1rem;
+    }
+    
+    &-header:not(.starts-with-figure) {
+      border-bottom: 1px solid _palette(border);
+      margin-bottom: 3rem;
+    }
+    
+    > p, > blockquote, > ul, > ol,
+    > h1, > h2, > h3, > h4, > h5, > h6,
+    > .figure:not(.full), > .podcast-wrapper {
+      @include inner;
+      max-width: 40rem; // line length
+    }
+  }
+}

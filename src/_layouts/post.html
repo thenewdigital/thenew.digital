@@ -16,13 +16,18 @@ contact_form_heading: Join the Discussion 💬
         {% if page.subtitle %}
         <h2 class="subtitle">{{ page.subtitle }}</h2>
         {% endif %}
-        <div class="post-meta">
+        <div class="post-info">
           {% assign author = site.data.authors[page.author] %}
           <img src="{{author.headshot | relative_url}}" class="headshot post-headshot" alt="{{author.name}} headshot" />
-          <div>
+          <div class="post-meta">
             <a href="{{author.url}}" class="post-author" rel="author">{{author.name}}</a>
             <time datetime="{{page.date | date: "%F"}}" class="post-date" pubdate>{{page.date | date: "%A, %B %e, %Y" }}</time>
           </div>
+          <nav class="external post-external">
+            {% if page.medium_url %}
+            <a title="View on Medium.com" href="{{page.medium_url}}">{% include icon.html icon="medium" %}</a>
+            {% endif %}
+          </nav>
           <div class="actions post-actions no-print">
             <button onclick="print()" class="button">
               {% include icon.html icon="print" %}
@@ -33,7 +38,7 @@ contact_form_heading: Join the Discussion 💬
       </div>
     </header>
     
-    {% if page.podcast %}
+    {% if page.anchor_url %}
       {% assign figure_split = content | split: '</figure>' %}
       {% capture figure %}{{ figure_split | first }}</figure>{% endcapture %}
       {% if starts_with_figure %}
@@ -42,7 +47,7 @@ contact_form_heading: Join the Discussion 💬
 
       <div class="podcast-wrapper no-print">
         <iframe class="podcast"
-          src="{{page.podcast}}"
+          src="{{page.anchor_url}}"
           onload="this.classList.add('loaded')"
           frameborder="0" scrolling="no"
         ></iframe>

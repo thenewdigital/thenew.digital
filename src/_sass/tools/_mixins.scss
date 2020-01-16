@@ -1,3 +1,14 @@
+@mixin inner {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: _size(inner);
+	width: calc(100% - 6rem);
+
+	@include breakpoint(small) {
+		width: calc(100% - 3rem);
+	}
+}
+
 /// Applies padding to an element, taking the current element-margin value into account.
 /// @param {mixed} $tb Top/bottom padding.
 /// @param {mixed} $lr Left/right padding.
