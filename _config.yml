@@ -25,6 +25,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      author: max
 
 uncss:
   stylesheets:
