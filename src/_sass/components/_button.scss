@@ -35,6 +35,10 @@ button,
 	  background-color #{_duration(transition)} ease-in-out,
 		color #{_duration(transition)} ease-in-out;
 	white-space: nowrap;
+	
+	@include breakpoint(small) {
+	  white-space: normal;
+	}
 
 	&:hover, &:active {
 		color: _palette(highlight);
