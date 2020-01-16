@@ -23,11 +23,14 @@ contact_form_heading: Join the Discussion 💬
             <a href="{{author.url}}" class="post-author" rel="author">{{author.name}}</a>
             <time datetime="{{page.date | date: "%F"}}" class="post-date" pubdate>{{page.date | date: "%A, %B %e, %Y" }}</time>
           </div>
+          {% if page.medium_url %}
           <nav class="external post-external no-print">
+            <span class="label">Also found on:</span>
             {% if page.medium_url %}
             <a title="View on Medium.com" href="{{page.medium_url}}">{% include icon.html icon="medium" %}</a>
             {% endif %}
           </nav>
+          {% endif %}
           <div class="actions post-actions no-print">
             <button onclick="print()" class="button">
               {% include icon.html icon="print" %}

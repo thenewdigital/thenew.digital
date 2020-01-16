@@ -1,4 +1,8 @@
 .external {
+  > * {
+    vertical-align: middle;
+  }
+  
   > a {
     display: inline-block;
     font-size: 1.5rem;
