@@ -33,11 +33,6 @@
   &-external {
     margin-left: _size(element-margin);
     
-    a {
-      margin-right: 0;
-      margin-left: 1.333rem;
-    }
-    
     @include breakpoint(small) {
       margin-left: 0;
       margin-top: 1.333rem;

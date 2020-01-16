@@ -58,5 +58,22 @@
         }
       }
     }
+    
+    @include breakpoint(xsmall) {
+      display: block;
+      
+      img {
+        position: static !important;
+        height: auto !important;
+      }
+      
+      > * {
+        padding: 0;
+        
+        + * {
+          margin-top: 0.375rem;
+        }
+      }
+    }
   }
 }

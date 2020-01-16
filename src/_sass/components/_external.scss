@@ -3,6 +3,17 @@
     vertical-align: middle;
   }
   
+  .label {
+    margin-right: 1.333rem;
+  }
+  
+  @include breakpoint(small) {
+    .label {
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+  }
+  
   > a {
     display: inline-block;
     font-size: 1.5rem;
