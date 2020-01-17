@@ -1,10 +1,73 @@
 .podcast {
-  height: 104px;
+  background: linear-gradient(to right, _palette(accent1), _palette(accent6));
+  align-items: center;
+  display: flex;
+	padding: 1rem;
   margin-bottom: _size(element-margin);
   width: 100%;
   
-  &.full {
-    height: 161px;
+  &.paused .icon-play, &:not(.paused) .icon-pause {
+    display: none;
+  }
+  
+  &-meta {
+    flex: 1;
+  }
+  
+  &-title {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  
+  &-progress {
+    align-items: center;
+    display: flex;
+    
+    > span {
+      line-height: 1;
+    }
+  }
+  
+  &-meter {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    height: 4px;
+    flex: 1;
+    position: relative;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+  
+  &-meter-fill {
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  
+  &-toggle {
+    margin-right: 1rem;
+    padding: 0;
+    position: relative;
+    width: 3.5em;
+    
+    .icon {
+      left: 50%;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &.did-error {
+    display: none;
   }
 }
 

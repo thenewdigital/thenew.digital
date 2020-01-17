@@ -3,6 +3,7 @@
     font-size: 1rem;
     
     .inner {
+      padding-bottom: 3rem;
       padding-top: 3rem;
     }
   }
@@ -72,7 +73,7 @@
     
     > p, > blockquote, > ul, > ol,
     > h1, > h2, > h3, > h4, > h5, > h6,
-    > .figure:not(.full), > .podcast-wrapper {
+    > .figure:not(.full), > .podcast {
       @include inner;
       max-width: 40rem; // line length
     }

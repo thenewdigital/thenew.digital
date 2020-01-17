@@ -57,14 +57,8 @@ contact_form_heading: Join the Discussion 💬
       {{ figure }}
       {% endif %}
 
-      <div class="podcast-wrapper no-print">
-        <iframe class="podcast"
-          src="{{page.anchor_url}}"
-          onload="this.classList.add('loaded')"
-          frameborder="0" scrolling="no"
-        ></iframe>
-      </div>
-      
+      {% include podcast.html anchor_url=page.anchor_url %}
+
       {% if starts_with_figure %}
       {{ figure_split | join: '</figure>' | remove_first: figure }}
       {% else %}

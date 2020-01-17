@@ -9,6 +9,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
 	<link rel="stylesheet" media="print" href="{{ "assets/css/print.css" | relative_url }}" />
+	{% if page.anchor_url %}
+	<link rel="preload" href="{{site.anchor_feed_url}}" as="fetch" crossorigin />
+	{% endif %}
 	
 	{% assign styles = layout.style %}
 	{% if page.style %}{% assign styles = styles | append: ',' | append: page.style %}{% endif %}

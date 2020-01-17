@@ -1,0 +1,17 @@
+<div class="podcast no-print"
+  data-feed-url="{{site.anchor_feed_url}}"
+  data-anchor-url="{{include.anchor_url}}"
+>
+  <button class="podcast-toggle button special">
+    {% include icon.html icon="play" %}
+    {% include icon.html icon="pause" %}
+  </button>
+  <div class="podcast-meta">
+    <h2 class="podcast-title"></h2>
+    <div class="podcast-progress">
+      <span class="podcast-current-time">0:00</span>
+      <div class="podcast-meter"><div class="podcast-meter-fill"></div></div>
+      <span class="podcast-length">-:--</span>
+    </div>
+  </div>
+</div>
