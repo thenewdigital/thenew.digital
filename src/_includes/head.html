@@ -6,7 +6,7 @@
     {{ site.title }}
 	</title>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="{{ "assets/css/main.css" | relative_url }}" />
 	<link rel="stylesheet" media="print" href="{{ "assets/css/print.css" | relative_url }}" />
 	
@@ -21,14 +21,6 @@
 	<script>
   	document.documentElement.classList.add('is-loading')
   	{% if site.donorbox %}window.DonorBox = { widgetLinkClassName: 'dbox-popup' }{% endif %}
-  	
-  	{% comment %}
-  	{% if page.path != "index.html" %}
-  	if (sessionStorage && sessionStorage.getItem('previous') === '{% link index.html %}') {
-  	  document.documentElement.classList.add('is-from-home')
-  	}
-  	{% endif %}
-  	{% endcomment %}
   	
     WebFontConfig = {
       google: {
