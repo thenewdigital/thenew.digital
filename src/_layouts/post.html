@@ -4,7 +4,7 @@ header_alt: true
 contact_form_heading: Join the Discussion 💬
 ---
 
-{% assign pre_figure = content | split: '<figure' | first | remove: ' ' | strip_newlines %}
+{% assign pre_figure = content | split: '<!--figure-->' | first | remove: ' ' | strip_newlines %}
 {% assign starts_with_figure = false %}
 {% unless pre_figure and pre_figure != '' %}{% assign starts_with_figure = true %}{% endunless %}
 
@@ -50,22 +50,18 @@ contact_form_heading: Join the Discussion 💬
       </div>
     </header>
     
-    {% if page.anchor_url %}
-      {% assign figure_split = content | split: '</figure>' %}
-      {% capture figure %}{{ figure_split | first }}</figure>{% endcapture %}
-      {% if starts_with_figure %}
-      {{ figure }}
-      {% endif %}
+    {% if page.anchor_url and starts_with_figure %}
+      {% assign figure_split = content | split: '<!--/figure-->' %}
+      {% capture figure %}{{ figure_split | first }}<!--/figure-->{% endcapture %}
+      {{ first_figure }}
 
       {% include podcast.html anchor_url=page.anchor_url %}
-
-      {% if starts_with_figure %}
-      {{ figure_split | join: '</figure>' | remove_first: figure }}
-      {% else %}
+      {{ figure_split | join: '<!--/figure-->' | remove_first: first_figure }}
+    {% elsif page.anchor_url %}
+      {% include podcast.html anchor_url=page.anchor_url %}
       {{content}}
-      {% endif %}
     {% else %}
-    {{content}}
+      {{content}}
     {% endif %}
   </article>
 </main>

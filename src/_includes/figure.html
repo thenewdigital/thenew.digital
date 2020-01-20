@@ -1,0 +1,19 @@
+<!--figure-->
+{% assign imgs = include.img | split: '|' %}
+{% assign alts = include.alt | split: '|' %}
+<figure class="figure{% if include.full %} full{% endif %}">
+  {% if imgs.size > 1 %}
+  <div class="imgs">
+    {% for img in imgs %}
+    {% assign i = forloop.index | minus: 1 %}
+    <div><img alt="{{alts[i]}}" src="{{img}}" /></div>
+    {% endfor %}
+  </div>
+  {% else %}
+    <img alt="{{include.alt}}" src="{{include.img}}" />
+  {% endif %}
+  <figcaption>
+    {{ include.caption | markdownify }}
+  </figcaption>
+</figure>
+<!--/figure-->
