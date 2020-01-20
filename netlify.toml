@@ -10,9 +10,16 @@
   minify = true
 [build.processing.images]
   compress = true
+[build.processing.html]
+  pretty_urls = true
 
 [context.production]
   ENVIRONMENT = { JEKYLL_ENV = "production" }
+  
+[[redirects]]
+  from = "/overview"
+  to = "/1"
+  status = 301
   
 [[redirects]]
   from = "/donate"
