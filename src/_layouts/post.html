@@ -23,21 +23,23 @@ contact_form_heading: Join the Discussion 💬
             <a href="{{author.url}}" class="post-author" rel="author">{{author.name}}</a>
             <time datetime="{{page.date | date: "%F"}}" class="post-date" pubdate>{{page.date | date: "%A, %B %e, %Y" }}</time>
           </div>
-          {% if page.apple_podcasts_url or page.google_podcasts_url or page.spotify_url or page.medium_url %}
+          {% if page.anchor_url or page.medium_url %}
           <nav class="external post-external no-print">
             <span class="label">Also found on:</span>
-            {% if page.apple_podcasts_url %}
-            <a title="Listen on Apple Podcasts" href="{{page.apple_podcasts_url}}">{% include icon.html icon="apple-podcasts" %}</a>
-            {% endif %}
-            {% if page.google_podcasts_url %}
-            <a title="Listen on Google Podcasts" href="{{page.google_podcasts_url}}">{% include icon.html icon="google-podcasts" %}</a>
-            {% endif %}
-            {% if page.spotify_url %}
-            <a title="Listen on Spotify" href="{{page.spotify_url}}">{% include icon.html icon="spotify" %}</a>
-            {% endif %}
-            {% if page.medium_url %}
-            <a title="Read on Medium" href="{{page.medium_url}}">{% include icon.html icon="medium" %}</a>
-            {% endif %}
+            <div class="external-icons">
+              {% if page.apple_podcasts_url %}
+              <a title="Listen on Apple Podcasts" href="{{page.apple_podcasts_url}}">{% include icon.html icon="apple-podcasts" %}</a>
+              {% endif %}
+              {% if page.google_podcasts_url %}
+              <a title="Listen on Google Podcasts" href="{{page.google_podcasts_url}}">{% include icon.html icon="google-podcasts" %}</a>
+              {% endif %}
+              {% if page.spotify_url %}
+              <a title="Listen on Spotify" href="{{page.spotify_url}}">{% include icon.html icon="spotify" %}</a>
+              {% endif %}
+              {% if page.medium_url %}
+              <a title="Read on Medium" href="{{page.medium_url}}">{% include icon.html icon="medium" %}</a>
+              {% endif %}
+            </div>
           </nav>
           {% endif %}
           <div class="actions post-actions no-print">

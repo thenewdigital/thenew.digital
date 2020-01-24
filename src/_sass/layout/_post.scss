@@ -79,3 +79,83 @@
     }
   }
 }
+
+.post-listing {
+  .post-author {
+    font-size: 1rem;
+  }
+  
+  &-link {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    
+    > * {
+      margin-bottom: 0;
+    }
+    
+    @include breakpoint(small) {
+      display: block;
+      
+      .button {
+        display: none;
+      }
+    }
+  }
+  
+  .post-info {
+    margin: 0;
+  }
+  
+  .title, .subtitle, .excerpt {
+    overflow: hidden;
+  }
+  
+  .subtitle {
+    padding-bottom: 1rem;
+  }
+  
+  .excerpt {
+    display: block;
+    padding-bottom: _size(element-margin);
+    margin: 0;
+  }
+  
+  .post-headshot {
+    height: 2.75rem;
+  }
+  
+  .post-image {
+    border: none;
+    display: block;
+    box-sizing: content-box;
+    margin-left: _size(element-margin);
+    float: right;
+    position: relative;
+    width: 25%;
+    
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+    
+    img {
+      object-fit: cover;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    
+    @include breakpoint(small) {
+      float: none;
+      margin: 0 0 1rem 0;
+      height: 6rem;
+      width: 100%;
+    }
+  }
+}

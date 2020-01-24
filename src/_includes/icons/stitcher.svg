@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0.189546 0.495158 246.484598 246.484598">
+ <defs>
+   <mask id="shapes">
+     <rect fill="#fff" width="100%" height="100%" />
+     <rect fill="#000" x="-0.132751" y="90.357546" width="43.85509" height="78.585051"/>
+   <rect fill="#000" x="50.532136" y="76.87415" width="43.582697" height="86.348219"/>
+   <rect fill="#000" x="101.878" y="84.637318" width="42.765521" height="88.663548"/>
+   <rect fill="#000" x="152.270494" y="71.426312" width="43.174109" height="91.52366"/>
+   <rect fill="#000" x="202.662991" y="86.816452" width="43.855086" height="70.958078"/>
+   </mask>
+ </defs>
+ <rect mask="url(#shapes)" x="0.189546" y="0.495158" width="246.484598" height="246.484598" rx="40" />
+ </svg>

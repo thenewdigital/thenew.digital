@@ -1,0 +1,54 @@
+---
+layout: default
+title: Articles & Podcast
+header_alt: true
+---
+
+<!-- Banner -->
+<header id="banner" class="banner style5">
+  <div class="inner">
+    <h1 class="major fit">Latest Articles</h1>
+    <div class="content">
+      <nav class="external large">
+        <span class="label">Listen on:</span>
+        <div class="external-icons">
+          {% if site.apple_podcasts_url %}
+          <a title="Listen on Apple Podcasts" href="{{site.apple_podcasts_url}}">{% include icon.html icon="apple-podcasts" %}</a>
+          {% endif %}
+          {% if site.google_podcasts_url %}
+          <a title="Listen on Google Podcasts" href="{{site.google_podcasts_url}}">{% include icon.html icon="google-podcasts" %}</a>
+          {% endif %}
+          {% if site.spotify_url %}
+          <a title="Listen on Spotify" href="{{site.spotify_url}}">{% include icon.html icon="spotify" %}</a>
+          {% endif %}
+          {% if site.breaker_url %}
+          <a title="Listen on Breaker" href="{{site.breaker_url}}">{% include icon.html icon="breaker" %}</a>
+          {% endif %}
+          {% if site.iheartradio_url %}
+          <a title="Listen on iHeartRadio" href="{{site.iheartradio_url}}">{% include icon.html icon="iheartradio" %}</a>
+          {% endif %}
+          {% if site.overcast_url %}
+          <a title="Listen on Overcast" href="{{site.overcast_url}}">{% include icon.html icon="overcast" %}</a>
+          {% endif %}
+          {% if site.pocket_casts_url %}
+          <a title="Listen on Pocket Casts" href="{{site.pocket_casts_url}}">{% include icon.html icon="pocket-casts" %}</a>
+          {% endif %}
+          {% if site.stitcher_url %}
+          <a title="Listen on Stitcher" href="{{site.stitcher_url}}">{% include icon.html icon="stitcher" %}</a>
+          {% endif %}
+          {% if site.downcast_url %}
+          <a title="Listen on Downcast" href="{{site.downcast_url}}">{% include icon.html icon="downcast" %}</a>
+          {% endif %}
+          {% if site.anchor_feed_url %}
+          <a title="RSS Link" href="{{site.anchor_feed_url}}">{% include icon.html icon="rss" %}</a>
+          {% endif %}
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<main role="main">
+  {% for post in site.posts %}
+  {% include post-listing.html post=post %}
+  {% endfor %}
+</main>

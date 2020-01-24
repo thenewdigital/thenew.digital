@@ -25,5 +25,9 @@ header_alt: true
     {% include tile.html page='pages/about.md' %}
     {% include tile.html page='recommended-products.html' %}
   </section>
-
+  
+  {% assign latest_post = site.posts | where_exp: "post", "post.unlisted != true" | last %}
+  {% if latest_post %}
+    {% include post-listing.html post=latest_post link=true %}
+  {% endif %}
 </main>
