@@ -1,9 +1,8 @@
 - index.html
-- pages/about.md
 -
   url: /1
   title: Overview
 - articles.html
 - recommended-products.html
-# - articles.html
+- pages/about.md
 - pages/speaking.md
