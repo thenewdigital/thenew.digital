@@ -19,6 +19,7 @@ const dbx = new Dropbox({
 })
 
 const pathsMap = {
+  'Data': path.resolve(__dirname, '../src/_data'),
   'Pages': path.resolve(__dirname, '../src/pages'),
   'Drafts': path.resolve(__dirname, '../src/_drafts'),
   'Posts': path.resolve(__dirname, '../src/_posts'),
